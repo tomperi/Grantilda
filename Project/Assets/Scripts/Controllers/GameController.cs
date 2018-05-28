@@ -266,7 +266,6 @@ public class GameController : MonoBehaviour
     private void RotateFrame(GameObject i_Frame)
     {
         Animator[] animator = i_Frame.GetComponentsInChildren<Animator>();
-        GameObject under = null;
         if (SoundManager.Instance != null)
         {
             SoundManager.Instance.PlayRotateFrameSoundEffect();
@@ -280,9 +279,6 @@ public class GameController : MonoBehaviour
                 anim.SetBool("Rotate", true);
             }
         }
-
-        //Animation animation = i_Frame.GetComponent<Animation>();
-        //animation.Play("FrameRotation");
     }
 
     public void zoomInOut()

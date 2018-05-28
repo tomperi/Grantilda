@@ -7,7 +7,7 @@ public class BasicEnemy : MonoBehaviour
 
     public Transform target;
     private NavMeshAgent agent;
-    private NavMeshPath path;
+    //private NavMeshPath path;
 	
     // Use this for initialization
 	void Start ()
@@ -38,10 +38,12 @@ public class BasicEnemy : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
+    /*
     public void GoToPosition(Vector3 destination)
     {
         agent.CalculatePath(destination, path);
     }
+    */
 
     public void StopNavAgent()
     {
@@ -53,10 +55,12 @@ public class BasicEnemy : MonoBehaviour
         agent.enabled = true;
     }
 
+    /*
     public void StopAtPlace()
     {
         GoToPosition(transform.position);
     }
+    */
 
     void OnDrawGizmosSelected()
     {
