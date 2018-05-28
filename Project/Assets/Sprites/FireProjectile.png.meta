@@ -1,0 +1,682 @@
+fileFormatVersion: 2
+guid: b473a53a320f633438cba82f05a74e7e
+timeCreated: 1524208944
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Projectile_01_0
+    21300002: Projectile_01_1
+    21300004: Projectile_01_2
+    21300006: Projectile_01_3
+    21300008: Projectile_01_4
+    21300010: Projectile_01_5
+    21300012: Projectile_01_6
+    21300014: Projectile_01_7
+    21300016: Projectile_01_8
+    21300018: Projectile_01_9
+    21300020: Projectile_01_10
+    21300022: Projectile_01_11
+    21300024: Projectile_01_12
+    21300026: Projectile_01_13
+    21300028: Projectile_01_14
+    21300030: Projectile_01_15
+    21300032: Projectile_01_16
+    21300034: Projectile_01_17
+    21300036: Projectile_01_18
+    21300038: Projectile_01_19
+    21300040: Projectile_01_20
+    21300042: Projectile_01_21
+    21300044: Projectile_01_22
+    21300046: Projectile_01_23
+    21300048: Projectile_01_24
+    21300050: Projectile_01_25
+    21300052: Projectile_01_26
+    21300054: Projectile_01_27
+    21300056: Projectile_01_28
+    21300058: Projectile_01_29
+    21300060: Projectile_01_30
+    21300062: Projectile_01_31
+    21300064: Projectile_01_32
+    21300066: Projectile_01_33
+    21300068: Projectile_01_34
+    21300070: Projectile_01_35
+    21300072: Projectile_01_36
+    21300074: Projectile_01_37
+    21300076: Projectile_01_38
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Projectile_01_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1735
+        width: 427
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_1
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1751
+        width: 476
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_2
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1756
+        width: 448
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_3
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 1751
+        width: 465
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_4
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 1740
+        width: 465
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_5
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 1767
+        width: 459
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_6
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 1740
+        width: 476
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_7
+      rect:
+        serializedVersion: 2
+        x: 3507
+        y: 1724
+        width: 481
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1410
+        width: 486
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_9
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1389
+        width: 465
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_10
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 1389
+        width: 476
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_11
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1400
+        width: 465
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_12
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 1394
+        width: 481
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_13
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 1383
+        width: 492
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_14
+      rect:
+        serializedVersion: 2
+        x: 3026
+        y: 1394
+        width: 476
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_15
+      rect:
+        serializedVersion: 2
+        x: 3524
+        y: 1356
+        width: 454
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1059
+        width: 481
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_17
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1065
+        width: 492
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_18
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1054
+        width: 465
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_19
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1059
+        width: 476
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_20
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 1065
+        width: 486
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_21
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 1065
+        width: 464
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_22
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 1065
+        width: 470
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_23
+      rect:
+        serializedVersion: 2
+        x: 3524
+        y: 1081
+        width: 448
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_24
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 751
+        width: 443
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_25
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 756
+        width: 465
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_26
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 751
+        width: 432
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_27
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 762
+        width: 444
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_28
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 756
+        width: 460
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_29
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 740
+        width: 443
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_30
+      rect:
+        serializedVersion: 2
+        x: 3005
+        y: 756
+        width: 459
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_31
+      rect:
+        serializedVersion: 2
+        x: 3529
+        y: 729
+        width: 438
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_32
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 405
+        width: 448
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_33
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 421
+        width: 460
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_34
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 411
+        width: 460
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_35
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 411
+        width: 471
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_36
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 416
+        width: 454
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_37
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 405
+        width: 525
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Projectile_01_38
+      rect:
+        serializedVersion: 2
+        x: 3026
+        y: 411
+        width: 460
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
