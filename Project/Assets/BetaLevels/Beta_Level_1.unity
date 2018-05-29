@@ -225,11 +225,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &45856340 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1342994426303526, guid: 2152a3ebc2542df4f97d43c3a8908432,
-    type: 2}
-  m_PrefabInternal: {fileID: 1143761928}
 --- !u!1 &128588001
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,26 +519,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114460491406863174, guid: aa02b12ca8c187647b09a9091b658d0b,
-        type: 2}
-      propertyPath: PauseButton
-      value: 
-      objectReference: {fileID: 1740870988}
-    - target: {fileID: 114460491406863174, guid: aa02b12ca8c187647b09a9091b658d0b,
-        type: 2}
-      propertyPath: PauseMenu
-      value: 
-      objectReference: {fileID: 1051562299}
-    - target: {fileID: 114460491406863174, guid: aa02b12ca8c187647b09a9091b658d0b,
-        type: 2}
-      propertyPath: ConfirmRestart
-      value: 
-      objectReference: {fileID: 1684134487}
-    - target: {fileID: 114460491406863174, guid: aa02b12ca8c187647b09a9091b658d0b,
-        type: 2}
-      propertyPath: ConfirmExit
-      value: 
-      objectReference: {fileID: 45856340}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa02b12ca8c187647b09a9091b658d0b, type: 2}
   m_IsPrefabParent: 0
@@ -1196,11 +1171,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!1 &1051562299 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1403617889771122, guid: 2152a3ebc2542df4f97d43c3a8908432,
-    type: 2}
-  m_PrefabInternal: {fileID: 1143761928}
 --- !u!43 &1122171966
 Mesh:
   m_ObjectHideFlags: 0
@@ -1701,16 +1671,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1684134487 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1117622160460814, guid: 2152a3ebc2542df4f97d43c3a8908432,
-    type: 2}
-  m_PrefabInternal: {fileID: 1143761928}
---- !u!1 &1740870988 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1013097894968888, guid: 2152a3ebc2542df4f97d43c3a8908432,
-    type: 2}
-  m_PrefabInternal: {fileID: 1143761928}
 --- !u!1001 &1756584254
 Prefab:
   m_ObjectHideFlags: 0

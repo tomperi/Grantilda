@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
     public bool startZoomedOut;
     public bool isPlayerInLevel;
     private bool runningOnDesktop;
-    private UIManager uiManager;
+    private LevelUI levelUI;
 
     private bool isZoomedIn;
     public bool IsZoomedIn { get { return isZoomedIn; } }
@@ -38,15 +38,15 @@ public class GameController : MonoBehaviour
 
         dragDistance = Screen.width * 15 / 100; //drag distance is 15% of the screen
         runningOnDesktop = SystemInfo.deviceType == DeviceType.Desktop;
-        uiManager = FindObjectOfType<UIManager>();
+        levelUI = FindObjectOfType<LevelUI>();
     }
 
     void Update()
     {
-        if (!isZoomedIn || uiManager.isPause)
+        if (!isZoomedIn || levelUI.isPause)
         {
             player.StopAtPlace();
-        }
+        }   
 
         //zoom in or out PC
         if (runningOnDesktop && Input.GetButtonDown("Jump"))
@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour
         }
 
         //zoom in or out Mobile
-        if (Input.touchCount == 2 && !uiManager.isPause)
+        if (Input.touchCount == 2 && !levelUI.isPause)
         {
             // Store both touches.
             Touch touchZero = Input.GetTouch(0);
@@ -103,7 +103,7 @@ public class GameController : MonoBehaviour
         }
 
         //move/rotate frame Mobile
-        if (Input.touchCount == 1 && !isZoomedIn && !uiManager.isPause) // user is touching the screen with a single touch
+        if (Input.touchCount == 1 && !isZoomedIn && !levelUI.isPause) // user is touching the screen with a single touch
         {
             Touch touch = Input.GetTouch(0); // get the touch
             if (touch.phase == TouchPhase.Began) //check for the first touch
@@ -181,7 +181,7 @@ public class GameController : MonoBehaviour
         }
 
         //move player mobile
-        if (Input.touchCount == 1 && isZoomedIn && !uiManager.isPause)
+        if (Input.touchCount == 1 && isZoomedIn && !levelUI.isPause)
         {
             Touch touch = Input.touches[0];
             Ray ray = Camera.main.ScreenPointToRay(touch.position);
