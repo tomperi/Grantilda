@@ -24,6 +24,10 @@ TextureImporter:
     21300034: Opening_Screen_04_17
     21300036: Opening_Screen_04_18
     21300038: Opening_Screen_04_19
+    21300040: Opening_Screen_04_20
+    21300042: Opening_Screen_04_21
+    21300044: Opening_Screen_04_22
+    21300046: Opening_Screen_04_23
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -77,7 +81,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -87,7 +91,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 8192
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -371,6 +385,62 @@ TextureImporter:
         serializedVersion: 2
         x: 5760
         y: 2792
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Opening_Screen_04_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1712
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Opening_Screen_04_21
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1712
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Opening_Screen_04_22
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1712
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Opening_Screen_04_23
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1712
         width: 1920
         height: 1080
       alignment: 0
