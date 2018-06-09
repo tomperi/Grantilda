@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using ProBuilder2.Common;
+using System;
 
 public class GameController : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class GameController : MonoBehaviour
         runningOnDesktop = SystemInfo.deviceType == DeviceType.Desktop;
         levelUI = FindObjectOfType<LevelUI>();
         nextZoomOutActionTime = 0;
-        sensitivityLevel = 0.02f;
+        sensitivityLevel = 0.03f;
     }
 
     void Update()
@@ -267,7 +268,18 @@ public class GameController : MonoBehaviour
             {
                 ToggleTimeScale();
             }
+
+            //pause game
+            if (Input.GetKeyUp(KeyCode.Escape))
+            {
+                levelUI.DisplayPauseMenu(!levelUI.isPause);                
+            }
         }
+    }
+
+    private void pauseGame()
+    {
+        throw new NotImplementedException();
     }
 
     private void RotateFrame(GameObject i_Frame)
