@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 23007958545291418}
   - component: {fileID: 114406326208358240}
   - component: {fileID: 120203404509445084}
+  - component: {fileID: 208815366272600874}
   m_Layer: 0
   m_Name: LaserOrigin
   m_TagString: Untagged
@@ -279,6 +280,21 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!208 &208815366272600874
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741205670098366}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!212 &212346996124840702
 SpriteRenderer:
   m_ObjectHideFlags: 1
