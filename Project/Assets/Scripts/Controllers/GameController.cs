@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour
         runningOnDesktop = SystemInfo.deviceType == DeviceType.Desktop;
         levelUI = FindObjectOfType<LevelUI>();
         nextZoomOutActionTime = 0;
-        sensitivityLevel = 0.03f;
+        sensitivityLevel = 0.05f;
     }
 
     void Update()
