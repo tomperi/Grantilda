@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 114406326208358240}
   - component: {fileID: 120203404509445084}
   - component: {fileID: 208815366272600874}
+  - component: {fileID: 114906953634164160}
   m_Layer: 0
   m_Name: LaserOrigin
   m_TagString: Untagged
@@ -193,6 +194,25 @@ MonoBehaviour:
   isTargetHit: 0
   temp: 0
   mat: {fileID: 2100000, guid: f500221b376d58d4f84f26f01076f5d1, type: 2}
+--- !u!114 &114906953634164160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741205670098366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3801185db6028de44a3f54f3dcd7c516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumDistance: 0
+  SecondsPerLine: 0.1
+  StartColor: {r: 1, g: 1, b: 1, a: 1}
+  EndColor: {r: 1, g: 1, b: 1, a: 1}
+  StartWidth: 2
+  EndWidth: 2
+  SortLayerName: Default
+  OrderInSortLayer: 1
 --- !u!120 &120203404509445084
 LineRenderer:
   m_ObjectHideFlags: 1

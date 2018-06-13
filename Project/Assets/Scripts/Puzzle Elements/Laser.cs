@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DigitalRuby.AnimatedLineRenderer;
 
 public class Laser : MonoBehaviour
 {
@@ -10,22 +11,28 @@ public class Laser : MonoBehaviour
 
     public float temp;
 
-    private LineRenderer lineRenderer;
+    //private LineRenderer lineRenderer;
     private Vector3[] linePositions;
+    private AnimatedLineRenderer alr;
 
     public Material mat;
 
     // Use this for initialization
     void Start()
     {
-        lineRenderer = GetComponent<LineRenderer>();
-        linePositions = new Vector3[1];
-        linePositions[0] = transform.position;
-        lineRenderer.positionCount = 1;
-        lineRenderer.SetPositions(linePositions);
+        alr = GetComponent<AnimatedLineRenderer>();
         isTargetHit = false;
 
-        lineRenderer.material = mat;
+        resetAlr();
+    }
+
+    private void resetAlr()
+    {
+        alr.Reset();
+        alr.SecondsPerLine = 1f;
+        alr.StartWidth = 0.7f;
+        alr.EndWidth = 0.7f;
+        alr.LineRenderer.material = mat;
     }
 
     public void ShootLaser()
@@ -69,14 +76,7 @@ public class Laser : MonoBehaviour
 
     public void resetLaser()
     {
-        updateOriginPosition();
-        Vector3[] newLinePositions = new Vector3[1];
-
-        newLinePositions[0] = linePositions[0];
-
-        linePositions = newLinePositions;
-        lineRenderer.positionCount = linePositions.Length;
-        lineRenderer.SetPositions(linePositions);
+        resetAlr();
     }
 
     private void updateOriginPosition()
@@ -86,16 +86,7 @@ public class Laser : MonoBehaviour
 
     public void addPoint(Vector3 newPoint, bool local)
     {
-        Vector3[] newLinePositions = new Vector3[linePositions.Length + 1];
-
-        for (int i = 0; i < linePositions.Length; i++)
-        {
-            newLinePositions[i] = linePositions[i];
-        }
-
-        newLinePositions[linePositions.Length] = newPoint;
-        linePositions = newLinePositions;
-        lineRenderer.positionCount = linePositions.Length;
-        lineRenderer.SetPositions(linePositions);
+        alr.Enqueue(transform.position);
+        alr.Enqueue(newPoint);
     }
 }
