@@ -18,7 +18,7 @@ public class SpriteController : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-        if (agent.velocity.x == 0)
+        if (agent.velocity.x == 0 && agent.velocity.z == 0)
         {
             if (audioSource != null)
             {
@@ -39,6 +39,10 @@ public class SpriteController : MonoBehaviour
             else if (agent.velocity.x < -.5f)
             {
                 animator.SetInteger("Direction", 1);
+            }
+            else if ((agent.velocity.z > .5 || agent.velocity.z < .5f) && (animator.GetInteger("Direction") == 0))
+            {
+                animator.SetInteger("Direction", -1);
             }
             else if (agent.velocity.z > .5f)
             {
