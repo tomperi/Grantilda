@@ -16,8 +16,11 @@ public class LevelExit : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            /*
             gameObject.GetComponent<BoxCollider>().isTrigger = false;
             moveToNextLevelScript.OnLevelComplete();
+            */
+            other.GetComponentInChildren<SpriteController>().SetTeleportOut();
         }
     }
 }

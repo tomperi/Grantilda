@@ -6,8 +6,7 @@ public class UIManager : MonoBehaviour
 {
     public void GoToLevel(int id)
     {
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + id;
-        SceneManager.LoadScene(nextSceneIndex);
+        SceneManager.LoadScene(id);
     }
 
     public void GoToMain()
@@ -20,5 +19,16 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 
-
+    public void GoToNextLevel()
+    {
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
+        {
+            GoToLevel(nextSceneIndex);
+        }
+        else
+        {
+            GoToLevel(0);
+        }
+    }
 }

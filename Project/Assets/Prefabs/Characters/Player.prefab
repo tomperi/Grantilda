@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95839903009212124}
   - component: {fileID: 114659130336878540}
   - component: {fileID: 82350848183307736}
+  - component: {fileID: 114237606301516222}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -116,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1082412086052166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.75, y: -99, z: 32.75}
+  m_LocalPosition: {x: -11.3, y: 0, z: 24.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4097467210386762}
@@ -308,6 +309,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 195210081562446202}
+--- !u!114 &114237606301516222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026015552775496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140f300b9244d0147805288dae805467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114659130336878540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -319,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b1099b35b6f2648873e4bdf9a63aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Shadow: {fileID: 1102859612043990}
 --- !u!195 &195210081562446202
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -379,7 +392,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.1, y: 8.84}
+  m_Size: {x: 7.5100007, y: 27.400002}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
