@@ -25,15 +25,17 @@ public class ZoomOutGesturesScript : MonoBehaviour {
         if (DisplayGestures)
         {
             gestureObject = findGestureObject(other.transform);
-            gestureObject.GetComponent<Animator>().SetBool(k_GestureBool, true);
-            StartCoroutine(playAnimationForNumberSeconds());
+            StartCoroutine(playAnimationForNumberSeconds(5f));
         }
     }
 
-    IEnumerator playAnimationForNumberSeconds()
+    IEnumerator playAnimationForNumberSeconds(float seconds)
     {
-        yield return new WaitForSeconds(5f);
-        gestureObject.GetComponent<Animator>().SetBool(k_GestureBool, false);
+        Animator gestureAnimator = gestureObject.GetComponent<Animator>();
+        gestureAnimator.SetBool(k_GestureBool, true);
+        yield return new WaitForSeconds(seconds);
+
+        gestureAnimator.SetBool(k_GestureBool, false);
     }
 
     private Transform findGestureObject(Transform gameObjectTransform)
