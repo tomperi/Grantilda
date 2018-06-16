@@ -30,8 +30,8 @@ public class GameController : MonoBehaviour
     private Vector3 firstTouchPosition;
     private Vector3 secondTouchPosition;
     private float dragDistance;
-    private float nextZoomOutActionTime;
-    private float sensitivityLevel;
+    //private float nextZoomOutActionTime;
+    //private float sensitivityLevel;
 
     void Start()
     {
@@ -43,8 +43,8 @@ public class GameController : MonoBehaviour
         dragDistance = Screen.width * 15 / 100; //drag distance is 15% of the screen
         runningOnDesktop = SystemInfo.deviceType == DeviceType.Desktop;
         levelUI = FindObjectOfType<LevelUI>();
-        nextZoomOutActionTime = 0;
-        sensitivityLevel = 0.05f;
+        //nextZoomOutActionTime = 0;
+        //sensitivityLevel = 0.05f;
     }
 
     void Update()
@@ -61,9 +61,9 @@ public class GameController : MonoBehaviour
         }
 
         //zoom in or out Mobile
-        if (Input.touchCount == 2 && !levelUI.isPause && Time.time > nextZoomOutActionTime)
+        if (Input.touchCount == 2 && !levelUI.isPause/* && Time.time > nextZoomOutActionTime*/)
         {
-            nextZoomOutActionTime = Time.time + sensitivityLevel;
+            //nextZoomOutActionTime = Time.time + sensitivityLevel;
             // Store both touches.
             Touch touchZero = Input.GetTouch(0);
             Touch touchOne = Input.GetTouch(1);
@@ -110,9 +110,9 @@ public class GameController : MonoBehaviour
         }
 
         //move/rotate frame Mobile
-        if (Input.touchCount == 1 && !isZoomedIn && !levelUI.isPause && Time.time > nextZoomOutActionTime) // user is touching the screen with a single touch
+        if (Input.touchCount == 1 && !isZoomedIn && !levelUI.isPause /*&& Time.time > nextZoomOutActionTime*/) // user is touching the screen with a single touch
         {
-            nextZoomOutActionTime = Time.time + sensitivityLevel;
+            //nextZoomOutActionTime = Time.time + sensitivityLevel;
             Touch touch = Input.GetTouch(0); // get the touch
             if (touch.phase == TouchPhase.Began) //check for the first touch
             {
