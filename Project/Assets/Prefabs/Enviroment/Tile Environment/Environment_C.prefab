@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4038399535080000}
   - component: {fileID: 212402587435853656}
   - component: {fileID: 208850041558920464}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Environment_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1064229083461884}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
