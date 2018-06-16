@@ -8,7 +8,15 @@ public class SpriteController : MonoBehaviour
     private NavMeshAgent agent;
     private Animator animator;
     private AudioSource audioSource;
-    private bool Teleport = false;
+    private bool teleport = false;
+
+    public bool Teleport
+    {
+        get
+        {
+            return teleport;
+        }
+    }
 
     // Use this for initialization
     void Start ()
@@ -20,7 +28,7 @@ public class SpriteController : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-	    if (!Teleport)
+	    if (!teleport)
 	    {
 	        if (agent.velocity.x == 0 && agent.velocity.z == 0)
 	        {
@@ -64,7 +72,7 @@ public class SpriteController : MonoBehaviour
 
     public void SetTeleportOut()
     {
-        Teleport = true;
+        teleport = true;
         Shadow.SetActive(false);
         animator.SetInteger("Direction", 5);
     }
