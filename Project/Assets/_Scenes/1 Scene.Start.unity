@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -287,12 +287,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: -243, y: -163}
-=======
-  m_AnchoredPosition: {x: 0, y: 0}
->>>>>>> parent of 099664a... added new logo to start screen
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -281.5, y: -163}
+  m_SizeDelta: {x: 77, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &19951542
 Animator:
@@ -1648,7 +1644,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 189280, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
@@ -2378,11 +2374,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -465.1394
+      value: -231
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -147.8638
+      value: -57
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_SizeDelta.x
@@ -2482,15 +2478,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.000005
+      value: 1.1047926
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.000005
+      value: 1.1047927
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1.000005
+      value: 1.1047927
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
@@ -2567,17 +2563,10 @@ RectTransform:
   m_Father: {fileID: 977544126}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
   m_AnchorMin: {x: 0.4016875, y: 0}
   m_AnchorMax: {x: 1, y: 0.7633524}
   m_AnchoredPosition: {x: -369, y: 49}
   m_SizeDelta: {x: 779.8, y: 115.37}
-=======
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
->>>>>>> parent of 099664a... added new logo to start screen
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &452122077
 Animator:
@@ -2934,7 +2923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &492168865
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3105,6 +3094,21 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 423f9d856ba6d7e49b5ccb8bbd8774b7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &525434952 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 189280, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
+  m_PrefabInternal: {fileID: 1375573950}
+--- !u!114 &525434955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525434952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1078cedd7d9ca894ab613e15f70f6ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &577840783
 GameObject:
   m_ObjectHideFlags: 0
@@ -4099,7 +4103,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -448.7926, y: 40.866882}
+  m_AnchoredPosition: {x: -448.79266, y: 40.86682}
   m_SizeDelta: {x: -1326.1, y: -717.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &973756951
@@ -5118,7 +5122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1126759590
@@ -5474,7 +5478,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224880981332470430, guid: b472f7d86ab03ef4391a234231cd9464,
     type: 2}
   m_PrefabInternal: {fileID: 990625335}
-<<<<<<< HEAD
 --- !u!1001 &1375573950
 Prefab:
   m_ObjectHideFlags: 0
@@ -5520,11 +5523,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -120
+      value: -130
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_SizeDelta.x
@@ -5624,15 +5627,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.1800969
+      value: 2.3867936
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.7440774
+      value: 1.9094347
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1.7440774
+      value: 1.9094347
       objectReference: {fileID: 0}
     - target: {fileID: 11401824, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_Sprite
@@ -5645,19 +5648,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11401824, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_Color.r
-      value: 0.78431374
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11401824, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_Color.g
-      value: 0.78431374
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11401824, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_Color.b
-      value: 0.78431374
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11401824, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.47058824
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11451136, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
@@ -5670,8 +5673,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44,
     type: 2}
   m_PrefabInternal: {fileID: 1375573950}
-=======
->>>>>>> parent of 099664a... added new logo to start screen
 --- !u!1 &1377176251
 GameObject:
   m_ObjectHideFlags: 0
@@ -6152,11 +6153,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -465.1394
+      value: -231.00006
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 194.67493
+      value: 142.6749
       objectReference: {fileID: 0}
     - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_SizeDelta.x
@@ -6253,6 +6254,18 @@ Prefab:
     - target: {fileID: 11435056, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
       propertyPath: m_FontData.m_MaxSize
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.1047871
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.1047872
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.1047872
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
@@ -6839,6 +6852,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.000005
       objectReference: {fileID: 0}
+    - target: {fileID: 189280, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b42086e3558be94fafab4210ee9ee44, type: 2}
   m_IsPrefabParent: 0
@@ -7113,7 +7130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5187292, y: 0.955585}
-  m_AnchoredPosition: {x: 462.02002, y: 23.959335}
+  m_AnchoredPosition: {x: 462.02002, y: 23.959229}
   m_SizeDelta: {x: 924, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1861502742

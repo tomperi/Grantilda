@@ -69,8 +69,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -117,8 +118,8 @@ TextureImporter:
       name: Opening_Screen_04_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 7112
+        x: 10
+        y: 7102
         width: 1920
         height: 1080
       alignment: 0
@@ -131,8 +132,8 @@ TextureImporter:
       name: Opening_Screen_04_1
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 7112
+        x: 1930
+        y: 7102
         width: 1920
         height: 1080
       alignment: 0
@@ -145,8 +146,8 @@ TextureImporter:
       name: Opening_Screen_04_2
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 7112
+        x: 3850
+        y: 7102
         width: 1920
         height: 1080
       alignment: 0
@@ -159,8 +160,8 @@ TextureImporter:
       name: Opening_Screen_04_3
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 7112
+        x: 5770
+        y: 7102
         width: 1920
         height: 1080
       alignment: 0
@@ -173,8 +174,8 @@ TextureImporter:
       name: Opening_Screen_04_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 6032
+        x: 10
+        y: 6022
         width: 1920
         height: 1080
       alignment: 0
@@ -187,8 +188,8 @@ TextureImporter:
       name: Opening_Screen_04_5
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 6032
+        x: 1930
+        y: 6022
         width: 1920
         height: 1080
       alignment: 0
@@ -201,8 +202,8 @@ TextureImporter:
       name: Opening_Screen_04_6
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 6032
+        x: 3850
+        y: 6022
         width: 1920
         height: 1080
       alignment: 0
@@ -215,8 +216,8 @@ TextureImporter:
       name: Opening_Screen_04_7
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 6032
+        x: 5770
+        y: 6022
         width: 1920
         height: 1080
       alignment: 0
@@ -229,8 +230,8 @@ TextureImporter:
       name: Opening_Screen_04_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4952
+        x: 10
+        y: 4942
         width: 1920
         height: 1080
       alignment: 0
@@ -243,8 +244,8 @@ TextureImporter:
       name: Opening_Screen_04_9
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 4952
+        x: 1930
+        y: 4942
         width: 1920
         height: 1080
       alignment: 0
@@ -257,8 +258,8 @@ TextureImporter:
       name: Opening_Screen_04_10
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 4952
+        x: 3850
+        y: 4942
         width: 1920
         height: 1080
       alignment: 0
@@ -271,8 +272,8 @@ TextureImporter:
       name: Opening_Screen_04_11
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 4952
+        x: 5770
+        y: 4942
         width: 1920
         height: 1080
       alignment: 0
@@ -285,8 +286,8 @@ TextureImporter:
       name: Opening_Screen_04_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3872
+        x: 10
+        y: 3862
         width: 1920
         height: 1080
       alignment: 0
@@ -299,8 +300,8 @@ TextureImporter:
       name: Opening_Screen_04_13
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 3872
+        x: 1930
+        y: 3862
         width: 1920
         height: 1080
       alignment: 0
@@ -313,8 +314,8 @@ TextureImporter:
       name: Opening_Screen_04_14
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 3872
+        x: 3850
+        y: 3862
         width: 1920
         height: 1080
       alignment: 0
@@ -327,8 +328,8 @@ TextureImporter:
       name: Opening_Screen_04_15
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 3872
+        x: 5770
+        y: 3862
         width: 1920
         height: 1080
       alignment: 0
@@ -341,8 +342,8 @@ TextureImporter:
       name: Opening_Screen_04_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2792
+        x: 10
+        y: 2782
         width: 1920
         height: 1080
       alignment: 0
@@ -355,8 +356,8 @@ TextureImporter:
       name: Opening_Screen_04_17
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 2792
+        x: 1930
+        y: 2782
         width: 1920
         height: 1080
       alignment: 0
@@ -369,8 +370,8 @@ TextureImporter:
       name: Opening_Screen_04_18
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 2792
+        x: 3850
+        y: 2782
         width: 1920
         height: 1080
       alignment: 0
@@ -383,64 +384,8 @@ TextureImporter:
       name: Opening_Screen_04_19
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 2792
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Opening_Screen_04_20
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1712
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Opening_Screen_04_21
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 1712
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Opening_Screen_04_22
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 1712
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Opening_Screen_04_23
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 1712
+        x: 5770
+        y: 2782
         width: 1920
         height: 1080
       alignment: 0
