@@ -7,10 +7,18 @@ public class ZoomOutGesturesScript : MonoBehaviour {
     public bool DisplayGestures { get; set; }
     private const string k_GestureBool = "gestureVisible";
     private Transform gestureObject;
+
     void Start ()
     {
         DisplayGestures = true;
-	}
+        FindObjectOfType<GameController>().zoomOutTriggered += disableGestures;
+
+    }
+
+    private void disableGestures()
+    {
+        DisplayGestures = false;
+    }
 
     public void OnTriggerEnter(Collider other)
     {

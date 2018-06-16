@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour
     private bool isZoomedIn;
     public bool IsZoomedIn { get { return isZoomedIn; } }
 
+    public event Action zoomOutTriggered;
+
 
     //used for laser levels
     private Laser laser;
@@ -324,6 +326,7 @@ public class GameController : MonoBehaviour
                 }
                 //soundManager.playZoomOutAction();
                 //Debug.Log("Zoom out");
+                OnZoomOut();
             }
             else
             {
@@ -356,6 +359,14 @@ public class GameController : MonoBehaviour
             zoomOutCamera.SetActive(false);
             isZoomedIn = true;
             //Debug.Log("Zoom in");
+        }
+    }
+
+    protected virtual void OnZoomOut()
+    {
+        if (zoomOutTriggered != null)
+        {
+            zoomOutTriggered.Invoke();
         }
     }
 
