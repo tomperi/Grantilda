@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -287,7 +287,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -243, y: -163}
+=======
+  m_AnchoredPosition: {x: 0, y: 0}
+>>>>>>> parent of 099664a... added new logo to start screen
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &19951542
@@ -2563,10 +2567,17 @@ RectTransform:
   m_Father: {fileID: 977544126}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0.4016875, y: 0}
   m_AnchorMax: {x: 1, y: 0.7633524}
   m_AnchoredPosition: {x: -369, y: 49}
   m_SizeDelta: {x: 779.8, y: 115.37}
+=======
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+>>>>>>> parent of 099664a... added new logo to start screen
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &452122077
 Animator:
@@ -2604,7 +2615,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1a90a16caa547404785fb32531d4feda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0950d0c3c4a8fc43bbcd8e5fdfffc5c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2923,7 +2934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &492168865
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4088,7 +4099,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -448.79266, y: 40.86682}
+  m_AnchoredPosition: {x: -448.7926, y: 40.866882}
   m_SizeDelta: {x: -1326.1, y: -717.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &973756951
@@ -5107,7 +5118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000030517578, y: -0.000015258789}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1126759590
@@ -5463,6 +5474,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224880981332470430, guid: b472f7d86ab03ef4391a234231cd9464,
     type: 2}
   m_PrefabInternal: {fileID: 990625335}
+<<<<<<< HEAD
 --- !u!1001 &1375573950
 Prefab:
   m_ObjectHideFlags: 0
@@ -5658,6 +5670,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22490358, guid: 6b42086e3558be94fafab4210ee9ee44,
     type: 2}
   m_PrefabInternal: {fileID: 1375573950}
+=======
+>>>>>>> parent of 099664a... added new logo to start screen
 --- !u!1 &1377176251
 GameObject:
   m_ObjectHideFlags: 0
