@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
 
     public event Action zoomOutTriggered;
     public event Action zoomInTriggered;
+    public event Action swipeTriggered;
 
 
     //used for laser levels
@@ -139,12 +140,14 @@ public class GameController : MonoBehaviour
                                 frameManager.SwitchEmptyFrameLocation(Direction.Right);
                                 StartCoroutine(resetLaser());
                                 Debug.Log("Right Swipe");
+                                OnSwipeTriggered();
                             }
                             else
                             {   //Left swipe
                                 frameManager.SwitchEmptyFrameLocation(Direction.Left);
                                 StartCoroutine(resetLaser());
                                 Debug.Log("Left Swipe");
+                                OnSwipeTriggered();
                             }
                         }
                         else if (Mathf.Abs(secondTouchPosition.x - firstTouchPosition.x) < Mathf.Abs(secondTouchPosition.y - firstTouchPosition.y))
@@ -154,6 +157,7 @@ public class GameController : MonoBehaviour
                                 frameManager.SwitchEmptyFrameLocation(Direction.Up);
                                 StartCoroutine(resetLaser());
                                 Debug.Log("Up Swipe");
+                                OnSwipeTriggered();
 
                             }
                             else
@@ -161,6 +165,7 @@ public class GameController : MonoBehaviour
                                 frameManager.SwitchEmptyFrameLocation(Direction.Down);
                                 StartCoroutine(resetLaser());
                                 Debug.Log("Down Swipe");
+                                OnSwipeTriggered();
                             }
                         }
                     }
@@ -229,6 +234,8 @@ public class GameController : MonoBehaviour
                             RotateFrame(frame);
                             //frame.transform.Rotate(new Vector3(0f, 90f, 0f));
                             //Debug.Log("Should rotate " + frame.transform.name);
+
+                            /*
                             foreach (Transform transformChild in frame.transform) // Messy, needs to fix later! ~ Amir
                             {
                                 if (transformChild.name == "ShadowProjectile(Clone)")
@@ -236,6 +243,7 @@ public class GameController : MonoBehaviour
                                     transformChild.gameObject.GetComponent<ProjectileController>().ChangeDirectionOnRotate();
                                 }
                             }
+                            */
                             StartCoroutine(resetLaser());
                         }
                     }
@@ -248,24 +256,28 @@ public class GameController : MonoBehaviour
                 {
                     frameManager.SwitchEmptyFrameLocation(Direction.Up);
                     StartCoroutine(resetLaser());
+                    OnSwipeTriggered();
                 }
 
                 if ((Input.GetKeyDown(KeyCode.RightArrow)) && (!isZoomedIn))
                 {
                     frameManager.SwitchEmptyFrameLocation(Direction.Right);
                     StartCoroutine(resetLaser());
+                    OnSwipeTriggered();
                 }
 
                 if ((Input.GetKeyDown(KeyCode.DownArrow)) && (!isZoomedIn))
                 {
                     frameManager.SwitchEmptyFrameLocation(Direction.Down);
                     StartCoroutine(resetLaser());
+                    OnSwipeTriggered();
                 }
 
                 if ((Input.GetKeyDown(KeyCode.LeftArrow)) && (!isZoomedIn))
                 {
                     frameManager.SwitchEmptyFrameLocation(Direction.Left);
                     StartCoroutine(resetLaser());
+                    OnSwipeTriggered();
                 }
             }
         }
@@ -375,6 +387,14 @@ public class GameController : MonoBehaviour
         if (zoomInTriggered != null)
         {
             zoomInTriggered.Invoke();
+        }
+    }
+
+    protected virtual void OnSwipeTriggered()
+    {
+        if (swipeTriggered != null)
+        {
+            swipeTriggered.Invoke();
         }
     }
 

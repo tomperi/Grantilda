@@ -2,33 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwipeGestureScript : MonoBehaviour {
+public class ZoomInGestureScript : MonoBehaviour {
 
     // Use this for initialization
     private const string k_GestureBool = "gestureVisible";
     private Animator gestureAnimator;
     private bool playerHasSwiped = false;
-    void Start ()
+
+    void Start()
     {
         GameController gameController = FindObjectOfType<GameController>();
-        gameController.zoomOutTriggered += playAnimation;
+        gameController.zoomOutTriggered += stopAnimation;
         gameController.zoomInTriggered += stopAnimation;
         gameController.swipeTriggered += firstSwipe;
         gestureAnimator = GetComponent<Animator>();
     }
-	
-	// Update is called once per frame
-	void Update ()
-    { 
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     private void playAnimation()
     {
-        if (!playerHasSwiped)
-        {
-            gestureAnimator.SetBool(k_GestureBool, true);
-        }
+        gestureAnimator.SetBool(k_GestureBool, true);
     }
 
     private void stopAnimation()
@@ -38,7 +36,11 @@ public class SwipeGestureScript : MonoBehaviour {
 
     private void firstSwipe()
     {
-        playerHasSwiped = true;
-        stopAnimation();
+        if(!playerHasSwiped)
+        {
+            playAnimation();
+            playerHasSwiped = true;
+        } 
     }
 }
+
