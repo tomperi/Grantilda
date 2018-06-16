@@ -8,15 +8,16 @@ TagManager:
   - Mirror
   - Projectile
   - Floating Stone
+  - Gesture
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  -
+  - 
   - Water
   - UI
-  -
-  -
+  - 
+  - 
   - Walls
   - Player
   - Floor
@@ -25,22 +26,22 @@ TagManager:
   - ClosedDoors
   - Bomb
   - Door
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0

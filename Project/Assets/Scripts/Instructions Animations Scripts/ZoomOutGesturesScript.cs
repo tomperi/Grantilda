@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class ZoomOutGesturesScript : MonoBehaviour {
 
-    public GameObject zoomOutGestureObject;
-    private bool wasTriggered;
-
-	// Use this for initialization
-	void Start () {
-        wasTriggered = false;
-        zoomOutGestureObject.SetActive(false);
+    public bool DisplayGestures { get; set; }
+    private const string k_GestureBool = "gestureVisible";
+    private Transform gestureObject;
+    void Start ()
+    {
+        DisplayGestures = true;
 	}
 
     public void OnTriggerEnter(Collider other)
     {
-        if (!wasTriggered)
+        if (DisplayGestures)
         {
-            wasTriggered = true;
-            zoomOutGestureObject.SetActive(true);
+            gestureObject = findGestureObject(other.transform);
+            gestureObject.GetComponent<Animator>().SetBool(k_GestureBool, true);
             StartCoroutine(playAnimationForNumberSeconds());
         }
     }
@@ -26,7 +25,31 @@ public class ZoomOutGesturesScript : MonoBehaviour {
     IEnumerator playAnimationForNumberSeconds()
     {
         yield return new WaitForSeconds(5f);
+        gestureObject.GetComponent<Animator>().SetBool(k_GestureBool, false);
+    }
 
-        zoomOutGestureObject.SetActive(false);
+    private Transform findGestureObject(Transform gameObjectTransform)
+    {
+        return findObjectWithTag(gameObjectTransform, "Gesture");
+    }
+
+    private Transform findObjectWithTag(Transform gameObjectTransform, string tag)
+    {
+        return getChildObject(gameObjectTransform, tag);
+    }
+
+    private Transform getChildObject(Transform gameObjectTransform , string tag)
+    {
+        Transform child = null;
+        for (int i = 0; i < gameObjectTransform.childCount; i++)
+        {
+            child = gameObjectTransform.GetChild(i);
+            if (child.tag == tag)
+            {
+                break;
+            }
+        }
+
+        return child;
     }
 }
