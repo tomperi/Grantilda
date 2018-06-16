@@ -128,7 +128,7 @@ TextureImporter:
       name: Opening_Screen_05_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 10
         y: 7102
         width: 1920
         height: 1080
@@ -142,7 +142,7 @@ TextureImporter:
       name: Opening_Screen_05_1
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 1930
         y: 7102
         width: 1920
         height: 1080
@@ -156,7 +156,7 @@ TextureImporter:
       name: Opening_Screen_05_2
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 3850
         y: 7102
         width: 1920
         height: 1080
@@ -170,7 +170,7 @@ TextureImporter:
       name: Opening_Screen_05_3
       rect:
         serializedVersion: 2
-        x: 5760
+        x: 5770
         y: 7102
         width: 1920
         height: 1080
@@ -184,7 +184,7 @@ TextureImporter:
       name: Opening_Screen_05_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 10
         y: 6022
         width: 1920
         height: 1080
@@ -198,7 +198,7 @@ TextureImporter:
       name: Opening_Screen_05_5
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 1930
         y: 6022
         width: 1920
         height: 1080
@@ -212,7 +212,7 @@ TextureImporter:
       name: Opening_Screen_05_6
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 3850
         y: 6022
         width: 1920
         height: 1080
@@ -226,7 +226,7 @@ TextureImporter:
       name: Opening_Screen_05_7
       rect:
         serializedVersion: 2
-        x: 5760
+        x: 5770
         y: 6022
         width: 1920
         height: 1080
@@ -240,7 +240,7 @@ TextureImporter:
       name: Opening_Screen_05_8
       rect:
         serializedVersion: 2
-        x: 0
+        x: 10
         y: 4942
         width: 1920
         height: 1080
@@ -254,7 +254,7 @@ TextureImporter:
       name: Opening_Screen_05_9
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 1930
         y: 4942
         width: 1920
         height: 1080
@@ -268,7 +268,7 @@ TextureImporter:
       name: Opening_Screen_05_10
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 3850
         y: 4942
         width: 1920
         height: 1080
@@ -282,7 +282,7 @@ TextureImporter:
       name: Opening_Screen_05_11
       rect:
         serializedVersion: 2
-        x: 5760
+        x: 5770
         y: 4942
         width: 1920
         height: 1080
@@ -296,7 +296,7 @@ TextureImporter:
       name: Opening_Screen_05_12
       rect:
         serializedVersion: 2
-        x: 0
+        x: 10
         y: 3862
         width: 1920
         height: 1080
@@ -310,7 +310,7 @@ TextureImporter:
       name: Opening_Screen_05_13
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 1930
         y: 3862
         width: 1920
         height: 1080
@@ -324,7 +324,7 @@ TextureImporter:
       name: Opening_Screen_05_14
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 3850
         y: 3862
         width: 1920
         height: 1080
@@ -338,7 +338,7 @@ TextureImporter:
       name: Opening_Screen_05_15
       rect:
         serializedVersion: 2
-        x: 5760
+        x: 5770
         y: 3862
         width: 1920
         height: 1080
@@ -352,7 +352,7 @@ TextureImporter:
       name: Opening_Screen_05_16
       rect:
         serializedVersion: 2
-        x: 0
+        x: 10
         y: 2782
         width: 1920
         height: 1080
@@ -366,7 +366,7 @@ TextureImporter:
       name: Opening_Screen_05_17
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 1930
         y: 2782
         width: 1920
         height: 1080
@@ -380,21 +380,7 @@ TextureImporter:
       name: Opening_Screen_05_18
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 2782
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Opening_Screen_05_19
-      rect:
-        serializedVersion: 2
-        x: 5760
+        x: 3850
         y: 2782
         width: 1920
         height: 1080
