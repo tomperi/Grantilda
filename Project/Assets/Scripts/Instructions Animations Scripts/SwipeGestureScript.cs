@@ -20,7 +20,10 @@ public class SwipeGestureScript : MonoBehaviour {
     IEnumerator playAnimationForNumberSeconds(float seconds)
     {     
         yield return new WaitForSeconds(seconds);
-        gestureAnimator.SetBool(k_GestureBool, true);
+        if (!playerHasSwiped)
+        {
+            gestureAnimator.SetBool(k_GestureBool, true);
+        }
     }
 
     // Update is called once per frame
