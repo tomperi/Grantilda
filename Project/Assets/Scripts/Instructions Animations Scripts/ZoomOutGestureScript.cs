@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZoomOutGesturesScript : MonoBehaviour {
+public class ZoomOutGestureScript : MonoBehaviour {
 
     public bool DisplayGestures { get; set; }
     private const string k_GestureBool = "gestureVisible";
@@ -12,12 +12,13 @@ public class ZoomOutGesturesScript : MonoBehaviour {
     {
         DisplayGestures = true;
         FindObjectOfType<GameController>().zoomOutTriggered += disableGestures;
-
     }
 
     private void disableGestures()
     {
         DisplayGestures = false;
+        Animator gestureAnimator = gestureObject.GetComponent<Animator>();
+        gestureAnimator.SetBool(k_GestureBool, false);
     }
 
     public void OnTriggerEnter(Collider other)
