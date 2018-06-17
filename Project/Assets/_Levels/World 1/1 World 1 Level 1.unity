@@ -266,6 +266,8 @@ MonoBehaviour:
   floorLayerMask:
     serializedVersion: 2
     m_Bits: 1024
+  pressFeedbackAnimatorObjectPrefab: {fileID: 1817825676161094, guid: c8ffb5b797ac6994f88c9b5db9c57d8f,
+    type: 2}
   allowZoomInOut: 0
   startZoomedOut: 0
   isPlayerInLevel: 1

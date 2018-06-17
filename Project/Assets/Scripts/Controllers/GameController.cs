@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public LayerMask playerLayerMask;
     public LayerMask frameLayerMask;
     public LayerMask floorLayerMask;
+    public GameObject pressFeedbackAnimatorObjectPrefab;
     public bool allowZoomInOut;
     public bool startZoomedOut;
     public bool isPlayerInLevel;
@@ -107,6 +108,7 @@ public class GameController : MonoBehaviour
                     if (Physics.Raycast(ray, out hit, 10000f, playerLayerMask))
                     {
                         player.GoToPosition(hit.point);
+                        createPressFeedbackAnimation(hit.point);
                     }
                 }
                 else
@@ -212,6 +214,7 @@ public class GameController : MonoBehaviour
                     if (touch.phase == TouchPhase.Ended)
                     {
                         player.GoToPosition(hit.point);
+                        createPressFeedbackAnimation(hit.point);
                     }
                 }
             }
@@ -412,5 +415,11 @@ public class GameController : MonoBehaviour
     private void ToggleTimeScale()
     {
         Time.timeScale = (Time.timeScale + 1) % 2;
+    }
+
+    private void createPressFeedbackAnimation(Vector3 pressLocation)
+    {
+        GameObject pressFeedbackAnimatorObject = Instantiate(pressFeedbackAnimatorObjectPrefab);
+        pressFeedbackAnimatorObject.transform.position = pressLocation;
     }
 }
