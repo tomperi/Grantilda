@@ -16,9 +16,15 @@ public class SwipeGestureScript : MonoBehaviour {
         gameController.swipeTriggered += firstSwipe;
         gestureAnimator = GetComponent<Animator>();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    IEnumerator playAnimationForNumberSeconds(float seconds)
+    {     
+        yield return new WaitForSeconds(seconds);
+        gestureAnimator.SetBool(k_GestureBool, true);
+    }
+
+    // Update is called once per frame
+    void Update ()
     { 
 		
 	}
@@ -27,7 +33,7 @@ public class SwipeGestureScript : MonoBehaviour {
     {
         if (!playerHasSwiped)
         {
-            gestureAnimator.SetBool(k_GestureBool, true);
+            StartCoroutine(playAnimationForNumberSeconds(1.5f));
         }
     }
 

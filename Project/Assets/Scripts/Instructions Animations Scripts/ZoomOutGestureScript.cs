@@ -17,8 +17,12 @@ public class ZoomOutGestureScript : MonoBehaviour {
     private void disableGestures()
     {
         DisplayGestures = false;
-        Animator gestureAnimator = gestureObject.GetComponent<Animator>();
-        gestureAnimator.SetBool(k_GestureBool, false);
+        if (gestureObject != null && gestureObject.gameObject.activeInHierarchy)
+        {
+            Animator gestureAnimator = gestureObject.GetComponent<Animator>();
+            gestureAnimator.SetBool(k_GestureBool, false);
+            gestureObject.gameObject.SetActive(false);
+        }
     }
 
     public void OnTriggerEnter(Collider other)
@@ -35,8 +39,10 @@ public class ZoomOutGestureScript : MonoBehaviour {
         Animator gestureAnimator = gestureObject.GetComponent<Animator>();
         gestureAnimator.SetBool(k_GestureBool, true);
         yield return new WaitForSeconds(seconds);
-
-        gestureAnimator.SetBool(k_GestureBool, false);
+        if (gestureObject.gameObject.activeInHierarchy)
+        {
+            gestureAnimator.SetBool(k_GestureBool, false);
+        }
     }
 
     private Transform findGestureObject(Transform gameObjectTransform)
