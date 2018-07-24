@@ -8,6 +8,7 @@ public class SwipeGestureScript : MonoBehaviour {
     private const string k_GestureBool = "gestureVisible";
     private Animator gestureAnimator;
     private bool playerHasSwiped = false;
+    private bool zoomOutActivated = false;
     void Start ()
     {
         GameController gameController = FindObjectOfType<GameController>();
@@ -20,7 +21,7 @@ public class SwipeGestureScript : MonoBehaviour {
     IEnumerator playAnimationForNumberSeconds(float seconds)
     {     
         yield return new WaitForSeconds(seconds);
-        if (!playerHasSwiped)
+        if (!playerHasSwiped && zoomOutActivated)
         {
             gestureAnimator.SetBool(k_GestureBool, true);
         }
@@ -36,12 +37,14 @@ public class SwipeGestureScript : MonoBehaviour {
     {
         if (!playerHasSwiped)
         {
+            zoomOutActivated = true;
             StartCoroutine(playAnimationForNumberSeconds(1.5f));
         }
     }
 
     private void stopAnimation()
     {
+        zoomOutActivated = false;
         gestureAnimator.SetBool(k_GestureBool, false);
     }
 
