@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - Floating Stone
   - Gesture
+  - Environment
   layers:
   - Default
   - TransparentFX

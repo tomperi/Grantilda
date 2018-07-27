@@ -190,7 +190,10 @@ public class GameController : MonoBehaviour
                     if (touch.phase == TouchPhase.Ended)
                     {
                         player.GoToPosition(hit.point);
-                        createPressFeedbackAnimation(hit.point);
+                        if (!recipient.tag.Equals("Environment"))
+                        {
+                            createPressFeedbackAnimation(hit.point);
+                        }
                     }
                 }
             }
@@ -213,8 +216,13 @@ public class GameController : MonoBehaviour
 
                         if (Physics.Raycast(ray, out hit, 10000f, playerLayerMask))
                         {
+                            GameObject recipient = hit.transform.gameObject;
+
                             player.GoToPosition(hit.point);
-                            createPressFeedbackAnimation(hit.point);
+                            if (!recipient.tag.Equals("Environment"))
+                            {
+                                createPressFeedbackAnimation(hit.point);
+                            }
                         }
                     }
                     else

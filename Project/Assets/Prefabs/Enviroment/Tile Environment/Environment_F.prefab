@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4110872873747768}
   - component: {fileID: 212822577825965074}
   - component: {fileID: 208077488698580708}
-  m_Layer: 2
+  - component: {fileID: 65391025856608442}
+  m_Layer: 0
   m_Name: Environment_F
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &65391025856608442
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1183155033541380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.87, y: 1.2800003, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &208077488698580708
 NavMeshObstacle:
   m_ObjectHideFlags: 1
