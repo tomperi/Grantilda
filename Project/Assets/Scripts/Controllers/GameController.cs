@@ -95,6 +95,7 @@ public class GameController : MonoBehaviour
             }
 
             //move/rotate frame Mobile
+            
             if (Input.touchCount == 1 && !isZoomedIn && !levelUI.isPause && Time.realtimeSinceStartup > nextZoomOutActionTime) // user is touching the screen with a single touch
             {
                 Touch touch = Input.GetTouch(0); // get the touch
@@ -109,7 +110,8 @@ public class GameController : MonoBehaviour
 
                     //Check if drag distance is greater than 15% of the screen height
                     if (Mathf.Abs(secondTouchPosition.x - firstTouchPosition.x) > dragDistance || Mathf.Abs(secondTouchPosition.y - firstTouchPosition.y) > dragDistance)
-                    {//It's a drag
+                    {/*
+                        //It's a drag
                      //check if the drag is vertical or horizontal
                         if (Mathf.Abs(secondTouchPosition.x - firstTouchPosition.x) > Mathf.Abs(secondTouchPosition.y - firstTouchPosition.y))
                         {   //If the horizontal movement is greater than the vertical movement...
@@ -145,7 +147,7 @@ public class GameController : MonoBehaviour
                                 Debug.Log("Down Swipe");
                                 OnSwipeTriggered();
                             }
-                        }
+                        }*/
                     }
                     else
                     {   //It's a tap as the drag distance is less than 20% of the screen height
@@ -175,7 +177,7 @@ public class GameController : MonoBehaviour
                 }
                 nextZoomOutActionTime = Time.realtimeSinceStartup + sensitivityLevel;
             }
-
+            
             //move player mobile
             if (Input.touchCount == 1 && isZoomedIn && !levelUI.isPause)
             {

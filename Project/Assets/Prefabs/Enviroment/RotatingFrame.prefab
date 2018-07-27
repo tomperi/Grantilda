@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1138952557323690
 GameObject:
   m_ObjectHideFlags: 1
@@ -112,7 +112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1289473991054432
 GameObject:
   m_ObjectHideFlags: 1
@@ -176,7 +176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1409124958335394
 GameObject:
   m_ObjectHideFlags: 1
@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 33109622145412374}
   - component: {fileID: 114630365100200506}
   - component: {fileID: 65264435054508830}
+  - component: {fileID: 114870437426081028}
   m_Layer: 10
   m_Name: Floor
   m_TagString: Untagged
@@ -551,7 +552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4070804471571998
 Transform:
   m_ObjectHideFlags: 1
@@ -3010,6 +3011,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 4
+--- !u!114 &114870437426081028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797181489173788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e406844f9788a2e44aec1b538436d161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114925080610259262
 MonoBehaviour:
   m_ObjectHideFlags: 1

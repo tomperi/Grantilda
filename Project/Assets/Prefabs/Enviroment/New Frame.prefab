@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 33753145498885212}
   - component: {fileID: 114096077091892440}
   - component: {fileID: 65897392319804198}
+  - component: {fileID: 114289279672266556}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -1646,6 +1647,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentRow: 0
   currentCol: 0
+--- !u!114 &114289279672266556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1694611967387760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e406844f9788a2e44aec1b538436d161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114298547860777840
 MonoBehaviour:
   m_ObjectHideFlags: 1
