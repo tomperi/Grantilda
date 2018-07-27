@@ -35,8 +35,8 @@ public class GameController : MonoBehaviour
     private Vector3 firstTouchPosition;
     private Vector3 secondTouchPosition;
     private float dragDistance;
-    //private float nextZoomOutActionTime;
-    //private float sensitivityLevel;
+    private float nextZoomOutActionTime;
+    private float sensitivityLevel;
 
     void Start()
     {
@@ -48,8 +48,9 @@ public class GameController : MonoBehaviour
         dragDistance = Screen.width * 15 / 100; //drag distance is 15% of the screen
         runningOnDesktop = SystemInfo.deviceType == DeviceType.Desktop;
         levelUI = FindObjectOfType<LevelUI>();
-        //nextZoomOutActionTime = 0;
-        //sensitivityLevel = 0.05f;
+        nextZoomOutActionTime = 0;
+        sensitivityLevel = 0.025f;
+        
     }
 
     void Update()
@@ -61,16 +62,11 @@ public class GameController : MonoBehaviour
 
         if (!player.GetComponentInChildren<SpriteController>().Teleport)
         {
-            //zoom in or out PC
-            if (runningOnDesktop && Input.GetButtonDown("Jump"))
-            {
-                zoomInOut();
-            }
+            //MOBILE
 
             //zoom in or out Mobile
-            if (Input.touchCount == 2 && !levelUI.isPause/* && Time.time > nextZoomOutActionTime*/)
+            if (Input.touchCount == 2 && !levelUI.isPause && Time.realtimeSinceStartup > nextZoomOutActionTime)
             {
-                //nextZoomOutActionTime = Time.time + sensitivityLevel;
                 // Store both touches.
                 Touch touchZero = Input.GetTouch(0);
                 Touch touchOne = Input.GetTouch(1);
@@ -95,32 +91,12 @@ public class GameController : MonoBehaviour
                     zoomInOut();
                 }
 
-            }
-
-            //move player PC
-            if (runningOnDesktop && Input.GetMouseButtonDown(0))
-            {
-                if (isZoomedIn && isPlayerInLevel)
-                {
-                    Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-                    RaycastHit hit;
-
-                    if (Physics.Raycast(ray, out hit, 10000f, playerLayerMask))
-                    {
-                        player.GoToPosition(hit.point);
-                        createPressFeedbackAnimation(hit.point);
-                    }
-                }
-                else
-                {
-                    // Use raycast to change frames
-                }
+                nextZoomOutActionTime = Time.realtimeSinceStartup + sensitivityLevel;
             }
 
             //move/rotate frame Mobile
-            if (Input.touchCount == 1 && !isZoomedIn && !levelUI.isPause /*&& Time.time > nextZoomOutActionTime*/) // user is touching the screen with a single touch
+            if (Input.touchCount == 1 && !isZoomedIn && !levelUI.isPause && Time.realtimeSinceStartup > nextZoomOutActionTime) // user is touching the screen with a single touch
             {
-                //nextZoomOutActionTime = Time.time + sensitivityLevel;
                 Touch touch = Input.GetTouch(0); // get the touch
                 if (touch.phase == TouchPhase.Began) //check for the first touch
                 {
@@ -196,8 +172,8 @@ public class GameController : MonoBehaviour
                             }
                         }
                     }
-
                 }
+                nextZoomOutActionTime = Time.realtimeSinceStartup + sensitivityLevel;
             }
 
             //move player mobile
@@ -219,84 +195,113 @@ public class GameController : MonoBehaviour
                 }
             }
 
-            //rotate frame PC
-            if (runningOnDesktop && Input.GetMouseButtonDown(1)) // Mouse Right Click
+            //PC
             {
-                if (!isZoomedIn)
+                //zoom in or out PC
+                if (runningOnDesktop && Input.GetButtonDown("Jump"))
                 {
-                    Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-                    RaycastHit hit;
+                    zoomInOut();
+                }
 
-
-                    if (Physics.Raycast(ray, out hit, 10000f, floorLayerMask))
+                //move player PC
+                if (runningOnDesktop && Input.GetMouseButtonDown(0))
+                {
+                    if (isZoomedIn && isPlayerInLevel)
                     {
-                        GameObject frame = hit.transform.parent.parent.gameObject;
+                        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+                        RaycastHit hit;
 
-                        if (frame != null)
+                        if (Physics.Raycast(ray, out hit, 10000f, playerLayerMask))
                         {
-                            RotateFrame(frame);
-                            //frame.transform.Rotate(new Vector3(0f, 90f, 0f));
-                            //Debug.Log("Should rotate " + frame.transform.name);
+                            player.GoToPosition(hit.point);
+                            createPressFeedbackAnimation(hit.point);
+                        }
+                    }
+                    else
+                    {
+                        // Use raycast to change frames
+                    }
+                }
 
-                            /*
-                            foreach (Transform transformChild in frame.transform) // Messy, needs to fix later! ~ Amir
+                //rotate frame PC
+                if (runningOnDesktop && Input.GetMouseButtonDown(1)) // Mouse Right Click
+                {
+                    if (!isZoomedIn)
+                    {
+                        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+                        RaycastHit hit;
+
+
+                        if (Physics.Raycast(ray, out hit, 10000f, floorLayerMask))
+                        {
+                            GameObject frame = hit.transform.parent.parent.gameObject;
+
+                            if (frame != null)
                             {
-                                if (transformChild.name == "ShadowProjectile(Clone)")
+                                RotateFrame(frame);
+                                //frame.transform.Rotate(new Vector3(0f, 90f, 0f));
+                                //Debug.Log("Should rotate " + frame.transform.name);
+
+                                /*
+                                foreach (Transform transformChild in frame.transform) // Messy, needs to fix later! ~ Amir
                                 {
-                                    transformChild.gameObject.GetComponent<ProjectileController>().ChangeDirectionOnRotate();
+                                    if (transformChild.name == "ShadowProjectile(Clone)")
+                                    {
+                                        transformChild.gameObject.GetComponent<ProjectileController>().ChangeDirectionOnRotate();
+                                    }
                                 }
+                                */
+                                StartCoroutine(resetLaser());
                             }
-                            */
-                            StartCoroutine(resetLaser());
                         }
                     }
                 }
+                if (runningOnDesktop)
+                {
+                    // Move frame PC
+                    if ((Input.GetKeyDown(KeyCode.UpArrow)) && (!isZoomedIn))
+                    {
+                        frameManager.SwitchEmptyFrameLocation(Direction.Up);
+                        StartCoroutine(resetLaser());
+                        OnSwipeTriggered();
+                    }
+
+                    if ((Input.GetKeyDown(KeyCode.RightArrow)) && (!isZoomedIn))
+                    {
+                        frameManager.SwitchEmptyFrameLocation(Direction.Right);
+                        StartCoroutine(resetLaser());
+                        OnSwipeTriggered();
+                    }
+
+                    if ((Input.GetKeyDown(KeyCode.DownArrow)) && (!isZoomedIn))
+                    {
+                        frameManager.SwitchEmptyFrameLocation(Direction.Down);
+                        StartCoroutine(resetLaser());
+                        OnSwipeTriggered();
+                    }
+
+                    if ((Input.GetKeyDown(KeyCode.LeftArrow)) && (!isZoomedIn))
+                    {
+                        frameManager.SwitchEmptyFrameLocation(Direction.Left);
+                        StartCoroutine(resetLaser());
+                        OnSwipeTriggered();
+                    }
+                }
             }
+
             if (runningOnDesktop)
             {
-                // Move frame PC
-                if ((Input.GetKeyDown(KeyCode.UpArrow)) && (!isZoomedIn))
+                // pause PC (not replicated in mobile)
+                if ((Input.GetKeyDown(KeyCode.P)))
                 {
-                    frameManager.SwitchEmptyFrameLocation(Direction.Up);
-                    StartCoroutine(resetLaser());
-                    OnSwipeTriggered();
+                    ToggleTimeScale();
                 }
 
-                if ((Input.GetKeyDown(KeyCode.RightArrow)) && (!isZoomedIn))
+                //pause game
+                if (Input.GetKeyUp(KeyCode.Escape))
                 {
-                    frameManager.SwitchEmptyFrameLocation(Direction.Right);
-                    StartCoroutine(resetLaser());
-                    OnSwipeTriggered();
+                    levelUI.DisplayPauseMenu(!levelUI.isPause);
                 }
-
-                if ((Input.GetKeyDown(KeyCode.DownArrow)) && (!isZoomedIn))
-                {
-                    frameManager.SwitchEmptyFrameLocation(Direction.Down);
-                    StartCoroutine(resetLaser());
-                    OnSwipeTriggered();
-                }
-
-                if ((Input.GetKeyDown(KeyCode.LeftArrow)) && (!isZoomedIn))
-                {
-                    frameManager.SwitchEmptyFrameLocation(Direction.Left);
-                    StartCoroutine(resetLaser());
-                    OnSwipeTriggered();
-                }
-            }
-        }
-
-        if (runningOnDesktop)
-        {
-            // pause PC (not replicated in mobile)
-            if ((Input.GetKeyDown(KeyCode.P)))
-            {
-                ToggleTimeScale();
-            }
-
-            //pause game
-            if (Input.GetKeyUp(KeyCode.Escape))
-            {
-                levelUI.DisplayPauseMenu(!levelUI.isPause);
             }
         }
     }
