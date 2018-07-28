@@ -23,7 +23,7 @@ public class FrameManager : MonoBehaviour
 
     public Position EmptyFrame { get { return emptyFrame; } }
 
-    void Start()
+    void Awake()
     {
         initFrameArray();
 

@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     public bool startZoomedOut;
     public bool isPlayerInLevel;
     private bool runningOnDesktop;
+    public bool RunningOnDesktop {  get { return runningOnDesktop; } }
     private LevelUI levelUI;
 
     private bool isZoomedIn;
@@ -38,7 +39,7 @@ public class GameController : MonoBehaviour
     private float nextZoomOutActionTime;
     private float sensitivityLevel;
 
-    void Start()
+    void Awake()
     {
         isZoomedIn = startZoomedOut;
         startZoomInOut();

@@ -33,14 +33,14 @@ public class Dragger : MonoBehaviour {
         frameSize = 23.5f;
         frameAttachable = parentTransform.GetComponentInChildren<FrameAttachable>();
 
-        empty = GameObject.Find("Frame" + (frameManager.EmptyFrame.row - 1) + (frameManager.EmptyFrame.col - 1));
+        empty = GameObject.Find("Frame" + (frameManager.initialEmptyFrameRow) + (frameManager.initialEmptyFrameColumn));
         frames = GameObject.Find("Frames");
     }
 
     private void OnMouseDrag()
     {
         directionFromEmptyFrame dir = findDirectionFromEmptyFrame();
-        if (!gameController.IsZoomedIn && frame != null && Input.touchCount == 1 && dir != directionFromEmptyFrame.NotNextToEmptyFrame) 
+        if (!gameController.IsZoomedIn && frame != null && dir != directionFromEmptyFrame.NotNextToEmptyFrame && (Input.touchCount == 1 || gameController.RunningOnDesktop)) 
         {
             isBeingTouched = true;
             frameAttachable.gameObject.SetActive(false);
