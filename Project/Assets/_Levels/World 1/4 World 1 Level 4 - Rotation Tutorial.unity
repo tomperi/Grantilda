@@ -761,6 +761,7 @@ MonoBehaviour:
   allowZoomInOut: 1
   startZoomedOut: 0
   isPlayerInLevel: 1
+  PortalOn: 1
 --- !u!4 &128588003
 Transform:
   m_ObjectHideFlags: 0
@@ -1253,7 +1254,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-173344
+  m_Name: pb_Mesh-1498614
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -2982,7 +2983,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh425806
+  m_Name: pb_Mesh-1498340
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

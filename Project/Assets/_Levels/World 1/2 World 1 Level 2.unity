@@ -577,6 +577,7 @@ MonoBehaviour:
   allowZoomInOut: 0
   startZoomedOut: 0
   isPlayerInLevel: 1
+  PortalOn: 1
 --- !u!4 &128588003
 Transform:
   m_ObjectHideFlags: 0

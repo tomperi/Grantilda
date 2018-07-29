@@ -271,6 +271,7 @@ MonoBehaviour:
   allowZoomInOut: 0
   startZoomedOut: 0
   isPlayerInLevel: 1
+  PortalOn: 1
 --- !u!4 &128588003
 Transform:
   m_ObjectHideFlags: 0
@@ -644,7 +645,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-56412
+  m_Name: pb_Mesh-1060924
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -1344,7 +1345,7 @@ Prefab:
     - target: {fileID: 224024825907490452, guid: 2152a3ebc2542df4f97d43c3a8908432,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224024825907490452, guid: 2152a3ebc2542df4f97d43c3a8908432,
         type: 2}
@@ -1523,7 +1524,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1596752637
 Prefab:
@@ -1562,7 +1563,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4362000562809284, guid: 674a5fa6f78d816499ddd73369bfb5f2, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 33928273890626100, guid: 674a5fa6f78d816499ddd73369bfb5f2,
         type: 2}
@@ -1671,7 +1672,7 @@ Transform:
   - {fileID: 128588003}
   - {fileID: 661386172}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1756584254
 Prefab:
@@ -1744,7 +1745,7 @@ Transform:
   - {fileID: 821982527}
   - {fileID: 456327036}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1818962042
 Prefab:
