@@ -10,6 +10,7 @@ TagManager:
   - Floating Stone
   - Gesture
   - Environment
+  - Exit Portal
   layers:
   - Default
   - TransparentFX

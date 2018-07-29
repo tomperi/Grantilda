@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     private bool runningOnDesktop;
     public bool RunningOnDesktop {  get { return runningOnDesktop; } }
     private LevelUI levelUI;
+    public bool PortalOn;
 
     private bool isZoomedIn;
     public bool IsZoomedIn { get { return isZoomedIn; } }
@@ -51,7 +52,15 @@ public class GameController : MonoBehaviour
         levelUI = FindObjectOfType<LevelUI>();
         nextZoomOutActionTime = 0;
         sensitivityLevel = 0.025f;
-        
+
+        if (PortalOn)
+        {
+            GameObject portal = GameObject.FindGameObjectWithTag("Exit Portal");
+            if (portal != null)
+            {
+                portal.GetComponent<Animator>().SetBool("Open", true);
+            }
+        }
     }
 
     void Update()
