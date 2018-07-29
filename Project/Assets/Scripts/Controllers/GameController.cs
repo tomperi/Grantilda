@@ -55,10 +55,10 @@ public class GameController : MonoBehaviour
 
         if (PortalOn)
         {
-            GameObject portal = GameObject.FindGameObjectWithTag("Exit Portal");
+            Portal portal = GameObject.FindGameObjectWithTag("Exit Portal").GetComponent<Portal>();
             if (portal != null)
             {
-                portal.GetComponent<Animator>().SetBool("Open", true);
+                portal.TurnOnPortal();
             }
         }
     }
