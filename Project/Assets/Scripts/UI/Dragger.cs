@@ -140,6 +140,15 @@ public class Dragger : MonoBehaviour {
                     break;
             }
 
+            if (parentTransform.Find("Player") != null)
+            {
+                player = parentTransform.Find("Player").gameObject;
+                if (player != null)
+                {
+                    player.GetComponent<PlayerController>().StartNavAgent();
+                }
+            }
+
             parentTransform.position = initialPosition;
         }
     }
@@ -150,15 +159,6 @@ public class Dragger : MonoBehaviour {
         frameManager.SwitchFramePositionWithEmptyFramePosition(frame.currentRow, frame.currentCol);
         empty.transform.position = initialPosition;
         initialPosition = parentTransform.position;
-
-        if (parentTransform.Find("Player") != null)
-        {
-            player = parentTransform.Find("Player").gameObject;
-            if (player != null)
-            {
-                player.GetComponent<PlayerController>().StartNavAgent();
-            }
-        }
         
     }
 
