@@ -1885,6 +1885,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1064229083461884, guid: 922ca5a398e40cf43968414447f3c28d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 922ca5a398e40cf43968414447f3c28d, type: 2}
   m_IsPrefabParent: 0
@@ -5437,7 +5441,7 @@ Transform:
   - {fileID: 106821185}
   - {fileID: 1608426037}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1109933224
 Mesh:
@@ -5578,15 +5582,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4972027345849318, guid: fb749f86fe37bb74ab6132877982c283, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4972027345849318, guid: fb749f86fe37bb74ab6132877982c283, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4972027345849318, guid: fb749f86fe37bb74ab6132877982c283, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4972027345849318, guid: fb749f86fe37bb74ab6132877982c283, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7101,7 +7105,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1493871487 stripped
 GameObject:
@@ -7581,7 +7585,7 @@ Transform:
   - {fileID: 1945734249}
   - {fileID: 698736995}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1731626609
 Prefab:
@@ -7784,7 +7788,7 @@ Transform:
   - {fileID: 821982527}
   - {fileID: 456327036}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1812825502
 Mesh:
