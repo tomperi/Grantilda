@@ -88,4 +88,16 @@ public class SpriteController : MonoBehaviour
         agent.isStopped = false;
         Shadow.SetActive(true);
     }
+
+    public void StartShrinkPlayer()
+    {
+        agent.isStopped = true;
+        animator.SetBool("Shrink", true);
+    }
+
+    public void EndShrinkPlayer()
+    {
+        agent.isStopped = false;
+        animator.SetBool("Shrink", false);
+    }
 }

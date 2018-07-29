@@ -338,6 +338,13 @@ public class GameController : MonoBehaviour
                 anim.SetBool("Rotate", true);
             }
         }
+
+        // Check if the player is a child of i_Frame, if so, call the SpriteController.StartShrinkPlayer
+        SpriteController playerSprite = i_Frame.GetComponentInChildren<SpriteController>();
+        if (playerSprite != null)
+        {
+            playerSprite.StartShrinkPlayer();
+        }
     }
 
     public void zoomInOut()
