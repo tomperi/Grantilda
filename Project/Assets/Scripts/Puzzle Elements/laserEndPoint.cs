@@ -10,7 +10,7 @@ public class laserEndPoint : MonoBehaviour {
     private GameObject offSprite;
     private GameObject onSprite;
 
-    private LevelExit exit;
+    private Portal exit;
 
     public bool WasHit {get {return wasHit;}}
 
@@ -25,8 +25,11 @@ public class laserEndPoint : MonoBehaviour {
         offSprite.SetActive(true);
         onSprite.SetActive(false);
 
-        exit = FindObjectOfType<LevelExit>();
-        exit.gameObject.SetActive(false);
+        exit = FindObjectOfType<Portal>();
+        if (exit != null)
+        {
+            exit.TurnOffPortal();
+        }
 	}
 	
 	public void OnHitTarget()
@@ -47,16 +50,20 @@ public class laserEndPoint : MonoBehaviour {
     IEnumerator setExitActive()
     {
         yield return new WaitForSeconds(3f);
-        exit.gameObject.SetActive(true);
+        //exit.gameObject.SetActive(true);
+        if (exit.gameObject.GetComponent<Animator>() != null)
+        {
+            exit.gameObject.GetComponent<Animator>().SetBool("Open", true);
+        }
     }
 
     IEnumerator waitAndStartAnim()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
-        if (onSprite.GetComponent<Animator>() != null)
+        if (exit != null)
         {
-            onSprite.GetComponent<Animator>().Play("ReceiverAnimation");
+            exit.TurnOnPortal();
         }
 
     }

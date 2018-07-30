@@ -8,7 +8,7 @@ public class Portal : MonoBehaviour
     public bool portalOn;
     private Animator animator;
 
-    private void Start()
+    private void Awake()
     {
         gameObject.GetComponent<BoxCollider>().isTrigger = true;
         animator = GetComponent<Animator>();

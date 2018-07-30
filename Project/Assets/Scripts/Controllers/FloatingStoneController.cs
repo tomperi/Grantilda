@@ -5,15 +5,15 @@ using UnityEngine;
 public class FloatingStoneController : MonoBehaviour {
 
     private Animator animator;
-    private LevelExit exit;
+    private Portal exit;
     private GameController controller;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         controller = FindObjectOfType<GameController>();
-        exit = FindObjectOfType<LevelExit>();
-        exit.gameObject.SetActive(false);
+        exit = FindObjectOfType<Portal>();
+        exit.TurnOffPortal();
     }
 
     public void PlayDeathAndDestory()
@@ -30,7 +30,7 @@ public class FloatingStoneController : MonoBehaviour {
             controller.zoomInOut();
         }
         yield return new WaitForSeconds(2f);
-        exit.gameObject.SetActive(true);
+        exit.TurnOnPortal();
         gameObject.SetActive(false);
     }
 
