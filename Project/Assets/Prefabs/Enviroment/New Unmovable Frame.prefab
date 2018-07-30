@@ -136,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4362000562809284}
   m_Layer: 0
-  m_Name: New Frame
+  m_Name: New Unmovable Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,7 +424,6 @@ GameObject:
   - component: {fileID: 33753145498885212}
   - component: {fileID: 114096077091892440}
   - component: {fileID: 65897392319804198}
-  - component: {fileID: 114289279672266556}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -634,8 +633,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1472162607930736}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2}
+  m_LocalScale: {x: 3.6, y: 3.6, z: 3.6}
   m_Children: []
   m_Father: {fileID: 4264327749700320}
   m_RootOrder: 0
@@ -1647,17 +1646,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentRow: 0
   currentCol: 0
---- !u!114 &114289279672266556
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1694611967387760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e406844f9788a2e44aec1b538436d161, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114298547860777840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3213,7 +3201,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b4fb3990c53d961419ef3f0f1e0a1986, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9cac75cd4d539b428adbc6678333b8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

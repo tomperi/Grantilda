@@ -59,7 +59,7 @@ public class laserEndPoint : MonoBehaviour {
 
     IEnumerator waitAndStartAnim()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         if (exit != null)
         {
