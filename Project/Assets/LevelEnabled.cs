@@ -6,14 +6,10 @@ public class LevelEnabled : MonoBehaviour
     private Image image;
     private Button button;
 
-	void Start ()
+	void Awake()
 	{
 	    image = GetComponent<Image>();
 	    button = GetComponent<Button>();
-	}
-
-	void Update () {
-		
 	}
 
     public void EnableLevel(int i_Level)

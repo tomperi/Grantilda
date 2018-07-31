@@ -4643,7 +4643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OpenAllLevels: 0
-  MaxLevelOpen: 5
+  MaxLevelOpen: 0
   Levels: {fileID: 763465933}
 --- !u!1 &1508726076
 GameObject:

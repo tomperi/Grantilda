@@ -1170,6 +1170,53 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1001 &1060052095
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1645593745}
+    m_Modifications:
+    - target: {fileID: 4920902027225822, guid: ba5fa6e01f1c8f34580aa89cfa8c2593, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920902027225822, guid: ba5fa6e01f1c8f34580aa89cfa8c2593, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920902027225822, guid: ba5fa6e01f1c8f34580aa89cfa8c2593, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920902027225822, guid: ba5fa6e01f1c8f34580aa89cfa8c2593, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920902027225822, guid: ba5fa6e01f1c8f34580aa89cfa8c2593, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920902027225822, guid: ba5fa6e01f1c8f34580aa89cfa8c2593, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920902027225822, guid: ba5fa6e01f1c8f34580aa89cfa8c2593, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920902027225822, guid: ba5fa6e01f1c8f34580aa89cfa8c2593, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ba5fa6e01f1c8f34580aa89cfa8c2593, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1060052096 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4920902027225822, guid: ba5fa6e01f1c8f34580aa89cfa8c2593,
+    type: 2}
+  m_PrefabInternal: {fileID: 1060052095}
 --- !u!43 &1122171966
 Mesh:
   m_ObjectHideFlags: 0
@@ -1671,6 +1718,7 @@ Transform:
   - {fileID: 427255222}
   - {fileID: 128588003}
   - {fileID: 661386172}
+  - {fileID: 1060052096}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
