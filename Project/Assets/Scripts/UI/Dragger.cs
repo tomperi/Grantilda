@@ -15,6 +15,7 @@ public class Dragger : MonoBehaviour {
     private FrameAttachable frameAttachable;
     private GameObject player;
     private Transform parentTransform;
+    private Laser laser;
 
     private void Start()
     {
@@ -35,10 +36,13 @@ public class Dragger : MonoBehaviour {
 
         empty = GameObject.Find("Frame" + (frameManager.initialEmptyFrameRow) + (frameManager.initialEmptyFrameColumn));
         frames = GameObject.Find("Frames");
+
+        laser = FindObjectOfType<Laser>();
     }
 
     private void OnMouseDrag()
     {
+        StartCoroutine(resetLaser());
         directionFromEmptyFrame dir = findDirectionFromEmptyFrame();
         if (!gameController.IsZoomedIn && frame != null && dir != directionFromEmptyFrame.NotNextToEmptyFrame && (Input.touchCount == 1 || gameController.RunningOnDesktop)) 
         {
@@ -193,6 +197,16 @@ public class Dragger : MonoBehaviour {
         }
 
         return directionFromEmptyFrame.NotNextToEmptyFrame;
+    }
+
+    IEnumerator resetLaser()
+    {
+        if (laser != null)
+        {
+            laser.resetLaser();
+        }
+
+        yield return new WaitForSeconds(0.1f);
     }
 
 
