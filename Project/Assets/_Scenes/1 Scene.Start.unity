@@ -790,7 +790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &243192351
 RectTransform:
   m_ObjectHideFlags: 0
@@ -878,6 +878,7 @@ MonoBehaviour:
   ScrollRect: {fileID: 1263757751}
   ContentPanel: {fileID: 763465934}
   FirstLevel: {fileID: 731531746}
+  jump: 75
 --- !u!225 &243192356
 CanvasGroup:
   m_ObjectHideFlags: 0
