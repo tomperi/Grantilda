@@ -36,7 +36,6 @@ public class SnapToLevel : MonoBehaviour {
         forceToPosition = true;
         position = (Vector2)ScrollRect.transform.InverseTransformPoint(ContentPanel.position)
                    - (Vector2)ScrollRect.transform.InverseTransformPoint(FirstLevel.position);
-        
     }
 
     void Update()
