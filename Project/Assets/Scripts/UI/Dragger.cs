@@ -17,6 +17,8 @@ public class Dragger : MonoBehaviour {
     private Transform parentTransform;
     private Laser laser;
 
+    public event Action dragTriggered;
+
     private void Start()
     {
         parentTransform = transform.parent;
@@ -163,7 +165,7 @@ public class Dragger : MonoBehaviour {
         frameManager.SwitchFramePositionWithEmptyFramePosition(frame.currentRow, frame.currentCol);
         empty.transform.position = initialPosition;
         initialPosition = parentTransform.position;
-        
+        OnDragTriggered();
     }
 
     private directionFromEmptyFrame findDirectionFromEmptyFrame()
@@ -217,6 +219,14 @@ public class Dragger : MonoBehaviour {
         BelowEmptyFrame,
         LeftOfEmptyFrame,
         RightOfEmptyFrame
+    }
+
+    protected virtual void OnDragTriggered()
+    {
+        if (dragTriggered != null)
+        {
+            dragTriggered.Invoke();
+        }
     }
 
 }

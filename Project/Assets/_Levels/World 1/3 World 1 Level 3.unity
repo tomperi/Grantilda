@@ -2612,6 +2612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2296d8621e3d78438b310680930c12c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggeringDragger: {fileID: 1189952993}
 --- !u!212 &1022075134
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2914,12 +2915,17 @@ GameObject:
   m_PrefabParentObject: {fileID: 1403617889771122, guid: 2152a3ebc2542df4f97d43c3a8908432,
     type: 2}
   m_PrefabInternal: {fileID: 2022093355}
+--- !u!1 &1189952993 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1694611967387760, guid: 674a5fa6f78d816499ddd73369bfb5f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1616454662}
 --- !u!43 &1238313502
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-758546
+  m_Name: pb_Mesh25330
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -3305,6 +3311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba5f1c8e2988a1347bf0df2688053d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggeringDragger: {fileID: 1189952993}
 --- !u!43 &1467141418
 Mesh:
   m_ObjectHideFlags: 0
@@ -4236,7 +4243,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh26438
+  m_Name: pb_Mesh-2620
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -4872,6 +4879,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224696884747043004, guid: 2152a3ebc2542df4f97d43c3a8908432,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.421875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2152a3ebc2542df4f97d43c3a8908432, type: 2}

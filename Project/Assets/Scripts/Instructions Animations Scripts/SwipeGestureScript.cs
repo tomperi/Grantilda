@@ -10,6 +10,7 @@ public class SwipeGestureScript : MonoBehaviour {
     private bool playerHasSwiped = false;
     private bool zoomOutActivated = false;
     private GameController gameController;
+    public GameObject triggeringDragger;
 
     void Start ()
     {
@@ -17,6 +18,8 @@ public class SwipeGestureScript : MonoBehaviour {
         gameController.zoomOutTriggered += playAnimation;
         gameController.zoomInTriggered += stopAnimation;
         gameController.swipeTriggered += firstSwipe;
+        Dragger dragger = triggeringDragger.GetComponent<Dragger>();
+        dragger.dragTriggered += firstSwipe;
         gestureAnimator = GetComponent<Animator>();
         
     }

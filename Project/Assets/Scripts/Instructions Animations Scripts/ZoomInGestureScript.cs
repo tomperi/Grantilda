@@ -8,6 +8,7 @@ public class ZoomInGestureScript : MonoBehaviour {
     private const string k_GestureBool = "gestureVisible";
     private Animator gestureAnimator;
     private bool playerHasSwiped = false;
+    public GameObject triggeringDragger;
 
     void Start()
     {
@@ -15,6 +16,8 @@ public class ZoomInGestureScript : MonoBehaviour {
         gameController.zoomOutTriggered += stopAnimation;
         gameController.zoomInTriggered += stopAnimation;
         gameController.swipeTriggered += firstSwipe;
+        Dragger dragger = triggeringDragger.GetComponent<Dragger>();
+        dragger.dragTriggered += firstSwipe;
         gestureAnimator = GetComponent<Animator>();
     }
 
