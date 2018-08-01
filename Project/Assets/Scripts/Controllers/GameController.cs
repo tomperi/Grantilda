@@ -201,8 +201,8 @@ public class GameController : MonoBehaviour
 
                     if (touch.phase == TouchPhase.Ended)
                     {
-                        player.GoToPosition(hit.point);
-                        if (!recipient.tag.Equals("Environment"))
+                        bool pathValid = player.GoToPosition(hit.point);
+                        if (!recipient.tag.Equals("Environment") && pathValid)
                         {
                             createPressFeedbackAnimation(hit.point);
                         }
@@ -230,8 +230,8 @@ public class GameController : MonoBehaviour
                         {
                             GameObject recipient = hit.transform.gameObject;
 
-                            player.GoToPosition(hit.point);
-                            if (!recipient.tag.Equals("Environment"))
+                            bool pathValid = player.GoToPosition(hit.point);
+                            if (!recipient.tag.Equals("Environment") && pathValid)
                             {
                                 createPressFeedbackAnimation(hit.point);
                             }
@@ -366,7 +366,7 @@ public class GameController : MonoBehaviour
                 isZoomedIn = false;
                 if (isPlayerInLevel)
                 {
-                    player.StopAtPlace();
+                    player.StopNavAgent();
                 }
                 if (SoundManager.Instance != null)
                 {
@@ -379,6 +379,10 @@ public class GameController : MonoBehaviour
             {
                 zoomOutCamera.SetActive(false);
                 isZoomedIn = true;
+                if (isPlayerInLevel)
+                {
+                    player.StartNavAgent();
+                }
                 if (SoundManager.Instance != null)
                 {
                     SoundManager.Instance.ToggleZoomSoundAction(true);
@@ -397,7 +401,7 @@ public class GameController : MonoBehaviour
             isZoomedIn = false;
             if (isPlayerInLevel)
             {
-                player.StopAtPlace();
+                player.StopNavAgent();
             }
             //Debug.Log("Zoom out");
         }
@@ -405,6 +409,10 @@ public class GameController : MonoBehaviour
         {
             zoomOutCamera.SetActive(false);
             isZoomedIn = true;
+            if (isPlayerInLevel)
+            {
+                player.StartNavAgent();
+            }
             //Debug.Log("Zoom in");
         }
     }

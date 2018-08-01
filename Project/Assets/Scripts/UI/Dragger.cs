@@ -56,10 +56,6 @@ public class Dragger : MonoBehaviour {
             if (parentTransform.Find("Player") != null)
             {
                 player = parentTransform.Find("Player").gameObject;
-                if (player != null)
-                {
-                    player.GetComponent<PlayerController>().StopNavAgent();
-                }
             }
 
             switch (dir)
@@ -144,15 +140,6 @@ public class Dragger : MonoBehaviour {
                     break;
                 default:
                     break;
-            }
-
-            if (parentTransform.Find("Player") != null)
-            {
-                player = parentTransform.Find("Player").gameObject;
-                if (player != null)
-                {
-                    player.GetComponent<PlayerController>().StartNavAgent();
-                }
             }
 
             parentTransform.position = initialPosition;

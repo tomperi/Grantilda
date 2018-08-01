@@ -91,13 +91,13 @@ public class SpriteController : MonoBehaviour
 
     public void StartShrinkPlayer()
     {
-        agent.isStopped = true;
+        //agent.isStopped = true;
         animator.SetBool("Shrink", true);
     }
 
     public void EndShrinkPlayer()
     {
-        agent.isStopped = false;
+        //agent.isStopped = false;
         animator.SetBool("Shrink", false);
     }
 }

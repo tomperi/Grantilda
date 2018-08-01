@@ -29,19 +29,29 @@ public class PlayerController : MonoBehaviour {
         }
 	}
 
-    public void GoToPosition(Vector3 destination)
+    public bool GoToPosition(Vector3 destination)
     {
-        agent.CalculatePath(destination, currentPath);
+        bool pathValid = false;
+
+        if (agent.isActiveAndEnabled)
+        {
+            agent.CalculatePath(destination, currentPath);
+            pathValid = currentPath.status == NavMeshPathStatus.PathComplete;
+        }
+        
+        return pathValid;
     }
 
     public void StopNavAgent()
     {
         agent.enabled = false;
+        Debug.Log("Turn off agent");
     }
 
     public void StartNavAgent()
     {
         agent.enabled = true;
+        Debug.Log("Turn on agent");
     }
 
     public void StopAtPlace()
