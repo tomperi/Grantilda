@@ -21,7 +21,7 @@ public class LevelSelector : MonoBehaviour
 
         int levelReached = PlayerPrefs.GetInt("LevelReached", 1);
 
-        Debug.Log(levelReached);
+        //Debug.Log(levelReached);
 
 	    for (int i = 0; i < Levels.transform.childCount; i++)
 	    {
@@ -32,13 +32,13 @@ public class LevelSelector : MonoBehaviour
 	            {
                     // Disable level button
 	                currentLevel.DisableLevel();
-                    Debug.Log("Disabled " + Levels.transform.GetChild(i).name);
+                    //Debug.Log("Disabled " + Levels.transform.GetChild(i).name);
                 }
 	            else
 	            {
                     // Enable level button
                     currentLevel.EnableLevel(i + 1);
-                    Debug.Log("Enabled " + Levels.transform.GetChild(i).name);
+                    //Debug.Log("Enabled " + Levels.transform.GetChild(i).name);
                 }
             }
 	    }

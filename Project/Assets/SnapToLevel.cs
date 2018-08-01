@@ -9,13 +9,14 @@ public class SnapToLevel : MonoBehaviour {
     public float jump;
 
     private bool forceToPosition;
-    private Vector2 position;
+    private Vector2 defaultContentPosition;
 
     private Animator animator;
 
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
+        defaultContentPosition = ScrollRect.transform.InverseTransformPoint(ContentPanel.position);
     }
 
     public void SnapToFirstLevel()
@@ -23,19 +24,19 @@ public class SnapToLevel : MonoBehaviour {
         // Automatically snap to the first level element. No animation
         Canvas.ForceUpdateCanvases();
 
-        ContentPanel.localPosition =
-            (Vector2)ScrollRect.transform.InverseTransformPoint(ContentPanel.position)
-            - (Vector2)ScrollRect.transform.InverseTransformPoint(FirstLevel.position);
+        ContentPanel.localPosition = defaultContentPosition;
 
         animator.SetBool("SlideToFirstLevel", false);
+
+        //Debug.Log("Snap");
     }
 
     public void SlideToFirstLevel()
     {
         // Slide using animation to the first level
         forceToPosition = true;
-        position = (Vector2)ScrollRect.transform.InverseTransformPoint(ContentPanel.position)
-                   - (Vector2)ScrollRect.transform.InverseTransformPoint(FirstLevel.position);
+
+        //Debug.Log("Slide to " + defaultContentPosition);
     }
 
     void Update()
@@ -44,7 +45,7 @@ public class SnapToLevel : MonoBehaviour {
         {
             Canvas.ForceUpdateCanvases();
 
-            if (ContentPanel.localPosition.x < position.x)
+            if (ContentPanel.localPosition.x < defaultContentPosition.x)
             {
                 Vector2 newPosition = ContentPanel.localPosition;
                 newPosition.x += jump;
