@@ -64,3 +64,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPause: 0
+  PauseButton: {fileID: 0}
+  PauseMenu: {fileID: 0}
