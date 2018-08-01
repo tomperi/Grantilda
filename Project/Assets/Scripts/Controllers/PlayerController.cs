@@ -45,13 +45,13 @@ public class PlayerController : MonoBehaviour {
     public void StopNavAgent()
     {
         agent.enabled = false;
-        Debug.Log("Turn off agent");
+        //Debug.Log("Turn off agent");
     }
 
     public void StartNavAgent()
     {
         agent.enabled = true;
-        Debug.Log("Turn on agent");
+        //Debug.Log("Turn on agent");
     }
 
     public void StopAtPlace()
