@@ -56,15 +56,31 @@ public class StoneTrigger : MonoBehaviour {
     private void toggleOn()
     {
         isOff = false;
-        offSprite.SetActive(false);
-        onSprite.SetActive(true);
+
+        if (offSprite != null)
+        {
+            offSprite.SetActive(false);
+        }  
+
+        if (onSprite != null)
+        {
+            onSprite.SetActive(true);
+        }        
     }
 
     private void toggleOff()
     {
         isOff = true;
-        offSprite.SetActive(true);
-        onSprite.SetActive(false);
+
+        if (offSprite != null)
+        {
+            offSprite.SetActive(true);
+        }
+
+        if (onSprite != null)
+        {
+            onSprite.SetActive(false);
+        }
     }
 
     public void ResetTrigger()
