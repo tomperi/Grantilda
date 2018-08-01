@@ -50,6 +50,7 @@ public class Dragger : MonoBehaviour {
         {
             isBeingTouched = true;
             frameAttachable.gameObject.SetActive(false);
+            gameController.allowZoomInOut = false;
             Vector3 touchPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z - Camera.main.transform.position.z);
             Vector3 objPosition = Camera.main.ScreenToWorldPoint(touchPosition);
 
@@ -103,6 +104,7 @@ public class Dragger : MonoBehaviour {
         {
             isBeingTouched = false;
             frameAttachable.gameObject.SetActive(true);
+            gameController.allowZoomInOut = true;
             directionFromEmptyFrame direction = findDirectionFromEmptyFrame();
             
             switch (direction)
