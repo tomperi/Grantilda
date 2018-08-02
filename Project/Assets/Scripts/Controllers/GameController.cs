@@ -106,7 +106,7 @@ public class GameController : MonoBehaviour
 
             //move/rotate frame Mobile
             
-            if (Input.touchCount == 1 && !isZoomedIn && !levelUI.isPause && Time.realtimeSinceStartup > nextZoomOutActionTime) // user is touching the screen with a single touch
+            if (Input.touchCount == 1 && !isZoomedIn && allowZoomInOut && !levelUI.isPause && Time.realtimeSinceStartup > nextZoomOutActionTime) // user is touching the screen with a single touch
             {
                 Touch touch = Input.GetTouch(0); // get the touch
                 if (touch.phase == TouchPhase.Began) //check for the first touch

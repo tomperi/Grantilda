@@ -37,14 +37,20 @@ public class laserEndPoint : MonoBehaviour {
         if (!wasHit)
         {
             wasHit = true;
-            laser.levelHitTarget();
-
-            offSprite.SetActive(false);
-            onSprite.SetActive(true);
-
-            StartCoroutine(waitAndStartAnim());
-            StartCoroutine(setExitActive());
+            StartCoroutine(activateEndPoint());
         }
+    }
+
+    IEnumerator activateEndPoint()
+    {
+        yield return new WaitForSeconds(1f);
+        laser.levelHitTarget();
+
+        offSprite.SetActive(false);
+        onSprite.SetActive(true);
+
+        StartCoroutine(waitAndStartAnim());
+        StartCoroutine(setExitActive());
     }
 
     IEnumerator setExitActive()
