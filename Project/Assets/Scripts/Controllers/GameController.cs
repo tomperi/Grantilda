@@ -219,7 +219,7 @@ public class GameController : MonoBehaviour
                 }
 
                 //move player PC
-                if (runningOnDesktop && Input.GetMouseButtonDown(0))
+                if (runningOnDesktop && Input.GetMouseButtonDown(0) && !levelUI.isPause)
                 {
                     if (isZoomedIn && isPlayerInLevel)
                     {
