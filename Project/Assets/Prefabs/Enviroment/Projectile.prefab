@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114278171626045134}
   - component: {fileID: 54896537677063766}
   m_Layer: 0
-  m_Name: ShadowProjectile
+  m_Name: Projectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ Animator:
   m_GameObject: {fileID: 1668768044344078}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7a4355e3284b3fe4589f1af1844d8870, type: 2}
+  m_Controller: {fileID: 9100000, guid: b392e9146aa2ebb4185aca5acb34e54b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -147,7 +147,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 32767
-  m_Sprite: {fileID: 21300002, guid: 6f9ed547b032daa47a70fa7f67f21743, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a64da33eb24895743994b33a3d54e281, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

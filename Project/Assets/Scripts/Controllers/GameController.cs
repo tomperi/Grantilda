@@ -175,7 +175,7 @@ public class GameController : MonoBehaviour
                                 //Debug.Log("Should rotate " + frame.transform.name);
                                 foreach (Transform transformChild in frame.transform) // Messy, needs to fix later! ~ Amir
                                 {
-                                    if (transformChild.name == "ShadowProjectile(Clone)")
+                                    if (transformChild.name == "Projectile(Clone)")
                                     {
                                         transformChild.gameObject.GetComponent<ProjectileController>().ChangeDirectionOnRotate();
                                     }
