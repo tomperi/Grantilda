@@ -11,6 +11,7 @@ TagManager:
   - Gesture
   - Environment
   - Exit Portal
+  - Grass Environment
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - ClosedDoors
   - Bomb
   - Door
-  - 
+  - Grass
   - 
   - 
   - 

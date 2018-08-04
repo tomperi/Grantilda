@@ -340,7 +340,7 @@ Prefab:
     - target: {fileID: 224696884747043004, guid: 2152a3ebc2542df4f97d43c3a8908432,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2152a3ebc2542df4f97d43c3a8908432, type: 2}
@@ -379,7 +379,7 @@ MonoBehaviour:
   frameManager: {fileID: 427255221}
   playerLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967291
+    m_Bits: 4294901755
   frameLayerMask:
     serializedVersion: 2
     m_Bits: 1024

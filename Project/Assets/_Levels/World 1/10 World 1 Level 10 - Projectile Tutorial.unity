@@ -704,7 +704,7 @@ MonoBehaviour:
   frameManager: {fileID: 427255221}
   playerLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967291
+    m_Bits: 4294901755
   frameLayerMask:
     serializedVersion: 2
     m_Bits: 1025
