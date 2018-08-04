@@ -55,8 +55,10 @@ public class laserEndPoint : MonoBehaviour {
 
     IEnumerator setExitActive()
     {
-        yield return new WaitForSeconds(3f);
-        //exit.gameObject.SetActive(true);
+        laser.resetLaser();
+
+        yield return new WaitForSeconds(1.5f);
+        
         if (exit.gameObject.GetComponent<Animator>() != null)
         {
             exit.gameObject.GetComponent<Animator>().SetBool("Open", true);
