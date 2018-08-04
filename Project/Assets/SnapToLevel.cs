@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class SnapToLevel : MonoBehaviour {
-
+public class SnapToLevel : MonoBehaviour
+{
+    public MainMenu UIManager;
     public ScrollRect ScrollRect;
     public RectTransform ContentPanel;
     public RectTransform FirstLevel;
@@ -57,5 +58,10 @@ public class SnapToLevel : MonoBehaviour {
                 animator.SetBool("SlideToFirstLevel", true);
             }
         }
+    }
+
+    public void LevelRolledComplete()
+    {
+        UIManager.LevelRolledComplete();
     }
 }
