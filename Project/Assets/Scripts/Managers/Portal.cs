@@ -28,9 +28,9 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && portalOn)
         {
-            Vector3 portalCenter = gameObject.transform.position;
+            Vector3 portalCenter = gameObject.transform.GetChild(0).position;
             other.GetComponent<PlayerController>().GoToPosition(portalCenter);
         }
     }
