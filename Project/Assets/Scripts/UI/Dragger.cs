@@ -44,56 +44,63 @@ public class Dragger : MonoBehaviour {
 
     private void OnMouseDrag()
     {
-        StartCoroutine(resetLaser());
-        directionFromEmptyFrame dir = findDirectionFromEmptyFrame();
-        if (!gameController.IsZoomedIn && frame != null && dir != directionFromEmptyFrame.NotNextToEmptyFrame && (Input.touchCount == 1 || gameController.RunningOnDesktop)) 
+        gameController.isDragging = true;
+        Touch touch = Input.GetTouch(0);
+        if (touch.deltaPosition.sqrMagnitude > 0.1f)
         {
-            isBeingTouched = true;
-            frameAttachable.gameObject.SetActive(false);
-            gameController.allowZoomInOut = false;
-            Vector3 touchPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z - Camera.main.transform.position.z);
-            Vector3 objPosition = Camera.main.ScreenToWorldPoint(touchPosition);
-
-            if (parentTransform.Find("Player") != null)
+            StartCoroutine(resetLaser());
+            directionFromEmptyFrame dir = findDirectionFromEmptyFrame();
+            if (!gameController.IsZoomedIn && frame != null && dir != directionFromEmptyFrame.NotNextToEmptyFrame && (Input.touchCount == 1 || gameController.RunningOnDesktop))
             {
-                player = parentTransform.Find("Player").gameObject;
-            }
+                isBeingTouched = true;
+                frameAttachable.gameObject.SetActive(false);
+                gameController.allowZoomInOut = false;
+                Vector3 touchPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z - Camera.main.transform.position.z);
+                Vector3 objPosition = Camera.main.ScreenToWorldPoint(touchPosition);
 
-            switch (dir)
-            {
-                case directionFromEmptyFrame.NotNextToEmptyFrame:
-                    return;
-                    break;
-                case directionFromEmptyFrame.AboveEmptyFrame:
-                    if (objPosition.z <= initialPosition.z && objPosition.z >= (initialPosition.z - frameSize))
-                    {
-                        parentTransform.position = new Vector3(transform.position.x, frames.transform.position.y, objPosition.z);
-                    }
-                    break;
-                case directionFromEmptyFrame.BelowEmptyFrame:
-                    if (objPosition.z >= initialPosition.z && objPosition.z <= (initialPosition.z + frameSize))
-                    {
-                        parentTransform.position = new Vector3(transform.position.x, frames.transform.position.y , objPosition.z);
-                    }
-                    break;
-                case directionFromEmptyFrame.LeftOfEmptyFrame:
-                    if (objPosition.x >= initialPosition.x && objPosition.x <= (initialPosition.x + frameSize))
-                    {
-                        parentTransform.position = new Vector3(objPosition.x, frames.transform.position.y, initialPosition.z);
-                    }
-                    break;
-                case directionFromEmptyFrame.RightOfEmptyFrame:
-                    if (objPosition.x <= initialPosition.x && objPosition.x >= (initialPosition.x - frameSize))
-                    {
-                        parentTransform.position = new Vector3(objPosition.x, frames.transform.position.y, initialPosition.z);
-                    }
-                    break;
-                default:
-                    break;
-            }
+                if (parentTransform.Find("Player") != null)
+                {
+                    player = parentTransform.Find("Player").gameObject;
+                }
 
+                switch (dir)
+                {
+                    case directionFromEmptyFrame.NotNextToEmptyFrame:
+                        return;
+                        break;
+                    case directionFromEmptyFrame.AboveEmptyFrame:
+                        if (objPosition.z <= initialPosition.z && objPosition.z >= (initialPosition.z - frameSize))
+                        {
+                            parentTransform.position = new Vector3(transform.position.x, frames.transform.position.y, objPosition.z);
+                        }
+                        break;
+                    case directionFromEmptyFrame.BelowEmptyFrame:
+                        if (objPosition.z >= initialPosition.z && objPosition.z <= (initialPosition.z + frameSize))
+                        {
+                            parentTransform.position = new Vector3(transform.position.x, frames.transform.position.y, objPosition.z);
+                        }
+                        break;
+                    case directionFromEmptyFrame.LeftOfEmptyFrame:
+                        if (objPosition.x >= initialPosition.x && objPosition.x <= (initialPosition.x + frameSize))
+                        {
+                            parentTransform.position = new Vector3(objPosition.x, frames.transform.position.y, initialPosition.z);
+                        }
+                        break;
+                    case directionFromEmptyFrame.RightOfEmptyFrame:
+                        if (objPosition.x <= initialPosition.x && objPosition.x >= (initialPosition.x - frameSize))
+                        {
+                            parentTransform.position = new Vector3(objPosition.x, frames.transform.position.y, initialPosition.z);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
-        
+        else
+        {
+            gameController.isDragging = false;
+        }
     }
 
     
@@ -145,6 +152,7 @@ public class Dragger : MonoBehaviour {
             }
 
             parentTransform.position = initialPosition;
+            StartCoroutine(releaseDrag());
         }
     }
 
@@ -155,6 +163,7 @@ public class Dragger : MonoBehaviour {
         empty.transform.position = initialPosition;
         initialPosition = parentTransform.position;
         OnDragTriggered();
+        StartCoroutine(releaseDrag());
     }
 
     private directionFromEmptyFrame findDirectionFromEmptyFrame()
@@ -198,6 +207,13 @@ public class Dragger : MonoBehaviour {
         }
 
         yield return new WaitForSeconds(0.1f);
+    }
+
+    IEnumerator releaseDrag()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        gameController.isDragging = false;
     }
 
 

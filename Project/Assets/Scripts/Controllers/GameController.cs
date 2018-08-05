@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour
     private float dragDistance;
     private float nextZoomOutActionTime;
     private float sensitivityLevel;
+    public bool isDragging;
 
     void Awake()
     {
@@ -51,7 +52,8 @@ public class GameController : MonoBehaviour
         runningOnDesktop = SystemInfo.deviceType == DeviceType.Desktop;
         levelUI = FindObjectOfType<LevelUI>();
         nextZoomOutActionTime = 0;
-        sensitivityLevel = 0.025f;
+        sensitivityLevel = 0.05f;
+        isDragging = false;
 
         if (PortalOn)
         {
@@ -105,11 +107,40 @@ public class GameController : MonoBehaviour
             }
 
             //move/rotate frame Mobile
-            
-            if (Input.touchCount == 1 && !isZoomedIn && allowZoomInOut && !levelUI.isPause && Time.realtimeSinceStartup > nextZoomOutActionTime) // user is touching the screen with a single touch
+
+            if (Input.touchCount == 1 && !isZoomedIn && allowZoomInOut && !levelUI.isPause && Time.realtimeSinceStartup > nextZoomOutActionTime && !isDragging) // user is touching the screen with a single touch
             {
                 Touch touch = Input.GetTouch(0); // get the touch
-                if (touch.phase == TouchPhase.Began) //check for the first touch
+                if (touch.phase == TouchPhase.Ended && !isDragging)
+                {
+                    Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                    RaycastHit hit;
+
+                    if (Physics.Raycast(ray, out hit, 10000f, floorLayerMask) && !isDragging)
+                    {
+                        GameObject frame = hit.transform.parent.parent.gameObject;
+
+                        if (frame != null)
+                        {
+                            RotateFrame(frame);
+                            //frame.transform.Rotate(new Vector3(0f, 90f, 0f));
+                            //Debug.Log("Should rotate " + frame.transform.name);
+                            foreach (Transform transformChild in frame.transform) // Messy, needs to fix later! ~ Amir
+                            {
+                                if (transformChild.name == "Projectile(Clone)")
+                                {
+                                    transformChild.gameObject.GetComponent<ProjectileController>().ChangeDirectionOnRotate();
+                                }
+                            }
+                            StartCoroutine(resetLaser());
+                            nextZoomOutActionTime = Time.realtimeSinceStartup + (sensitivityLevel * 3);
+                        }
+                    }
+                }
+            }
+
+
+                /*if (touch.phase == TouchPhase.Began) //check for the first touch
                 {
                     firstTouchPosition = touch.position;
                     secondTouchPosition = touch.position;
@@ -120,7 +151,7 @@ public class GameController : MonoBehaviour
 
                     //Check if drag distance is greater than 15% of the screen height
                     if (Mathf.Abs(secondTouchPosition.x - firstTouchPosition.x) > dragDistance || Mathf.Abs(secondTouchPosition.y - firstTouchPosition.y) > dragDistance)
-                    {/*
+                    {
                         //It's a drag
                      //check if the drag is vertical or horizontal
                         if (Mathf.Abs(secondTouchPosition.x - firstTouchPosition.x) > Mathf.Abs(secondTouchPosition.y - firstTouchPosition.y))
@@ -157,7 +188,7 @@ public class GameController : MonoBehaviour
                                 Debug.Log("Down Swipe");
                                 OnSwipeTriggered();
                             }
-                        }*/
+                        }
                     }
                     else
                     {   //It's a tap as the drag distance is less than 20% of the screen height
@@ -184,9 +215,9 @@ public class GameController : MonoBehaviour
                             }
                         }
                     }
-                }
-                nextZoomOutActionTime = Time.realtimeSinceStartup + sensitivityLevel;
             }
+                nextZoomOutActionTime = Time.realtimeSinceStartup + sensitivityLevel;
+            }*/
             
             //move player mobile
             if (Input.touchCount == 1 && isZoomedIn && !levelUI.isPause)
