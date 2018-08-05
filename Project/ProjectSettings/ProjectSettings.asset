@@ -164,7 +164,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.pangolin.grantildaslittletale
   buildNumber: {}
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
