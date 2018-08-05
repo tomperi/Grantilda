@@ -125,6 +125,7 @@ public class GameController : MonoBehaviour
                             RotateFrame(frame);
                             //frame.transform.Rotate(new Vector3(0f, 90f, 0f));
                             //Debug.Log("Should rotate " + frame.transform.name);
+                            /*
                             foreach (Transform transformChild in frame.transform) // Messy, needs to fix later! ~ Amir
                             {
                                 if (transformChild.name == "Projectile(Clone)")
@@ -132,6 +133,7 @@ public class GameController : MonoBehaviour
                                     transformChild.gameObject.GetComponent<ProjectileController>().ChangeDirectionOnRotate();
                                 }
                             }
+                            */
                             StartCoroutine(resetLaser());
                             nextZoomOutActionTime = Time.realtimeSinceStartup + (sensitivityLevel * 3);
                         }
