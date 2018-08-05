@@ -47,6 +47,6 @@ public class UIManager : MonoBehaviour
 
     public void GoToPlayStore()
     {
-
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.pangolin.grantildaslittletale");
     }
 }
