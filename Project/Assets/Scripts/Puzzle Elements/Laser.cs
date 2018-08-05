@@ -51,6 +51,10 @@ public class Laser : MonoBehaviour
                 {
                     endPoint.OnHitTarget();
                 }
+                else if (endPoint == null)
+                {
+                    point.z += 1.5f;
+                }
                 
                 //Laser Level
                 LaserLevelTargets target = hit.transform.GetComponent<LaserLevelTargets>();
@@ -71,7 +75,6 @@ public class Laser : MonoBehaviour
     public void levelHitTarget()
     {
         isTargetHit = true;
-
     }
 
     public void resetLaser()
@@ -79,14 +82,13 @@ public class Laser : MonoBehaviour
         resetAlr();
     }
 
-    private void updateOriginPosition()
-    {
-        linePositions[0] = transform.position;
-    }
 
     public void addPoint(Vector3 newPoint, bool local)
     {
-        alr.Enqueue(transform.position);
+        Vector3 startPoint = transform.position;
+        startPoint.x += 1.5f;
+        startPoint.z += 1.5f;
+        alr.Enqueue(startPoint);
         alr.Enqueue(newPoint);
     }
 }

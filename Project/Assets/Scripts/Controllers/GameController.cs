@@ -421,6 +421,8 @@ public class GameController : MonoBehaviour
                 //Debug.Log("Zoom in");
                 OnZoomIn();
             }
+
+            StartCoroutine(resetLaser());
         }
     }
 

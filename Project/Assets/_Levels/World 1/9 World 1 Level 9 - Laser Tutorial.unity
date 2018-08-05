@@ -532,6 +532,7 @@ MonoBehaviour:
   startZoomedOut: 0
   isPlayerInLevel: 1
   PortalOn: 0
+  isDragging: 0
 --- !u!4 &128588003
 Transform:
   m_ObjectHideFlags: 0
@@ -4725,7 +4726,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4320547190508474, guid: f790f1689708ae94e8d8b8750bf00de4, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4320547190508474, guid: f790f1689708ae94e8d8b8750bf00de4, type: 2}
       propertyPath: m_LocalRotation.x
