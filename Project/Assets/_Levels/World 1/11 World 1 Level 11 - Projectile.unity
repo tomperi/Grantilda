@@ -1228,6 +1228,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &351972943 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114460491406863174, guid: aa02b12ca8c187647b09a9091b658d0b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1754409165}
+  m_Script: {fileID: 11500000, guid: 140f300b9244d0147805288dae805467, type: 3}
 --- !u!43 &408447044
 Mesh:
   m_ObjectHideFlags: 0
@@ -3054,7 +3060,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-8152
+  m_Name: pb_Mesh-391138
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -3575,7 +3581,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!1 &1126556549 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1403617889771122, guid: 2152a3ebc2542df4f97d43c3a8908432,
+  m_PrefabParentObject: {fileID: 1079325111739184, guid: 2152a3ebc2542df4f97d43c3a8908432,
     type: 2}
   m_PrefabInternal: {fileID: 1525000587}
 --- !u!43 &1136018900
@@ -4898,11 +4904,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224696884747043004, guid: 2152a3ebc2542df4f97d43c3a8908432,
+    - target: {fileID: 114301378798704580, guid: 2152a3ebc2542df4f97d43c3a8908432,
         type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -9.183594
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 351972943}
+    - target: {fileID: 114290164869675636, guid: 2152a3ebc2542df4f97d43c3a8908432,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 351972943}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2152a3ebc2542df4f97d43c3a8908432, type: 2}
   m_IsPrefabParent: 0

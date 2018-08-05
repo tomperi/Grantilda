@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -28,7 +27,26 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            GoToLevel(0);
+            // Show game completed menu, if it doesn't exist, go to the main menu
+            LevelUI LevelUI = GameObject.Find("UI Manager").GetComponent<LevelUI>();
+            GameObject GameCompletedParent = GameObject.Find("GameCompletedParent");
+            GameObject GameCompletedMenu = GameCompletedParent.transform.GetChild(0).gameObject;
+
+            if (LevelUI != null && GameCompletedMenu != null)
+            {
+                LevelUI.GetComponent<LevelUI>().isPause = true;
+                GameCompletedMenu.SetActive(true);
+                GameCompletedMenu.GetComponent<Animator>().SetBool("SlideOut", true);
+            }
+            else
+            {
+                GoToLevel(0);
+            }
         }
+    }
+
+    public void GoToPlayStore()
+    {
+
     }
 }
