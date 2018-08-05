@@ -20,11 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4260709799685838}
   - component: {fileID: 212712102582325784}
-  - component: {fileID: 208861751985264486}
   - component: {fileID: 65580422356980832}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Environment_A
-  m_TagString: Environment
+  m_TagString: Grass Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,21 +53,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.67, y: 1.7400004, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!208 &208861751985264486
-NavMeshObstacle:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1309539598326742}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.335, y: 0.87000006, z: 0.1}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!212 &212712102582325784
 SpriteRenderer:
   m_ObjectHideFlags: 1
