@@ -41,13 +41,15 @@ public class GameController : MonoBehaviour
     private float sensitivityLevel;
     public bool isDragging;
 
+    private GameObject frames;
+
     void Awake()
     {
         isZoomedIn = startZoomedOut;
         startZoomInOut();
 
         laser = FindObjectOfType<Laser>();
-
+        frames = GameObject.Find("Frames");
         dragDistance = Screen.width * 15 / 100; //drag distance is 15% of the screen
         runningOnDesktop = SystemInfo.deviceType == DeviceType.Desktop;
         levelUI = FindObjectOfType<LevelUI>();
@@ -235,7 +237,7 @@ public class GameController : MonoBehaviour
                     if (touch.phase == TouchPhase.Ended)
                     {
                         bool pathValid = player.GoToPosition(hit.point);
-                        if (!recipient.tag.Equals("Environment") && pathValid)
+                        if (!recipient.tag.Equals("Environment") && !recipient.tag.Equals("Floating Stone") && pathValid)
                         {
                             createPressFeedbackAnimation(hit.point);
                         }
@@ -264,7 +266,7 @@ public class GameController : MonoBehaviour
                             GameObject recipient = hit.transform.gameObject;
 
                             bool pathValid = player.GoToPosition(hit.point);
-                            if (!recipient.tag.Equals("Environment") && pathValid)
+                            if (!recipient.tag.Equals("Environment") && !recipient.tag.Equals("Floating Stone") && pathValid)
                             {
                                 createPressFeedbackAnimation(hit.point);
                             }
@@ -454,6 +456,16 @@ public class GameController : MonoBehaviour
 
     protected virtual void OnZoomOut()
     {
+        foreach (Transform frame in frames.transform)
+        {
+            foreach (Transform child in frame.transform)
+            {
+                if ((child.tag == "Environment" && child.gameObject.layer != LayerMask.NameToLayer("Laser")) || child.tag == "Grass Environment" || child.tag == "Floating Stone")
+                {
+                    child.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+                } 
+            }
+        }
         if (zoomOutTriggered != null)
         {
             zoomOutTriggered.Invoke();
@@ -462,6 +474,20 @@ public class GameController : MonoBehaviour
 
     protected virtual void OnZoomIn()
     {
+        foreach (Transform frame in frames.transform)
+        {
+            foreach (Transform child in frame.transform)
+            {
+                if (child.tag == "Grass Environment")
+                {
+                    child.gameObject.layer = LayerMask.NameToLayer("Grass");
+                }
+                else if ((child.tag == "Environment" && child.gameObject.layer != LayerMask.NameToLayer("Laser")) || child.tag == "Floating Stone")
+                {
+                    child.gameObject.layer = LayerMask.NameToLayer("Default");
+                }
+            }
+        }
         if (zoomInTriggered != null)
         {
             zoomInTriggered.Invoke();

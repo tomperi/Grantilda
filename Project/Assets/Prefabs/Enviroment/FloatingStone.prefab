@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114773031687225908}
   - component: {fileID: 208094237562022916}
   - component: {fileID: 65303489803223596}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: FloatingStone
   m_TagString: Floating Stone
   m_Icon: {fileID: 0}
